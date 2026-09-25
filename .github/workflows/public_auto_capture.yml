@@ -1,0 +1,100 @@
+name: Public Odds Auto Capture
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-odds-auto-capture
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout public repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout private source
+        uses: actions/checkout@v4
+        with:
+          repository: kantsu888-droid/oba-odds
+          token: ${{ secrets.SOURCE_PAT }}
+          path: source
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch race schedules
+        working-directory: source
+        run: python fetch_schedule_all.py
+
+      - name: Capture odds without private-repository pushes
+        working-directory: source
+        run: |
+          python - <<'PY'
+          import auto_capture_all
+
+          def skip_private_push(target_dt):
+              print(
+                  "Public runner: skip private-repository checkpoint push "
+                  + target_dt.strftime("%H:%M:%S")
+              )
+
+          auto_capture_all.checkpoint_captured_data = skip_private_push
+          auto_capture_all.main()
+          PY
+
+      - name: Merge daily odds
+        working-directory: source
+        run: python merge_daily_odds_all.py
+
+      - name: Copy today's data
+        run: |
+          TODAY="$(TZ=Asia/Tokyo date +%F)"
+          mkdir -p "data/${TODAY}"
+
+          if [ -d "source/data/${TODAY}" ]; then
+            cp -R "source/data/${TODAY}/." "data/${TODAY}/"
+          else
+            echo "No source data directory for ${TODAY}"
+          fi
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/
+
+          if git diff --cached --quiet; then
+            echo "No new data"
+            exit 0
+          fi
+
+          git commit -m "Update odds data"
+
+          for attempt in 1 2 3; do
+            echo "Push attempt ${attempt}/3"
+
+            if git pull --rebase origin main && git push origin main; then
+              echo "Public data pushed successfully"
+              exit 0
+            fi
+
+            git rebase --abort || true
+            sleep 5
+          done
+
+          echo "Failed to push public data after 3 attempts"
+          exit 1

@@ -59,6 +59,9 @@ jobs:
         working-directory: source
         run: python merge_daily_odds_all.py
 
+      - name: Sync public repository
+        run: git pull --rebase origin main
+
       - name: Copy today's data
         run: |
           TODAY="$(TZ=Asia/Tokyo date +%F)"

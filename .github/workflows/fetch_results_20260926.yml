@@ -1,4 +1,4 @@
-name: Fetch 2026-09-26 NAR results
+name: Build 2026-09-26 NAR compact results
 
 on:
   push:
@@ -11,9 +11,9 @@ permissions:
   contents: write
 
 jobs:
-  fetch-results:
+  build-compact:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,91 +25,111 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install parser
-        run: python -m pip install --quiet beautifulsoup4
-
-      - name: Fetch official NAR result pages
+      - name: Build compact official result file
         run: |
           python - <<'PY'
-          from urllib.request import Request, urlopen
-          from urllib.parse import urlencode
-          from bs4 import BeautifulSoup
           from pathlib import Path
           import json
-          import time
 
-          race_date = "2026/09/26"
-          tracks = {
-              "saga": {"code": "32", "races": range(1, 11)},
-              "kochi": {"code": "31", "races": range(1, 12)},
+          src = Path("data/2026-09-26/nar_results_tables_20260926.json")
+          data = json.loads(src.read_text(encoding="utf-8"))
+
+          known_types = {
+              "単勝", "複勝", "枠連複", "枠連単",
+              "馬連複", "馬連単", "ワイド",
+              "三連複", "三連単"
           }
 
-          output = {
-              "race_date": race_date,
-              "source": "NAR RaceMarkTable",
+          compact = {
+              "race_date": data["race_date"],
+              "source": data["source"],
               "tracks": {},
           }
 
-          base = "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable"
+          for track, races in data["tracks"].items():
+              compact["tracks"][track] = {}
+              for race_no, race in races.items():
+                  tables = race.get("tables", [])
+                  runners = []
+                  if tables:
+                      for row in tables[0][1:]:
+                          if len(row) < 4:
+                              continue
+                          rank_text = row[0].strip()
+                          horse_no = row[2].strip()
+                          horse_name = row[3].strip()
+                          if not horse_no.isdigit():
+                              continue
+                          item = {
+                              "rank": int(rank_text) if rank_text.isdigit() else None,
+                              "horse_no": int(horse_no),
+                              "horse_name": horse_name,
+                              "status": "" if rank_text.isdigit() else " ".join(row),
+                          }
+                          if len(row) > 14:
+                              item["popularity"] = row[14].strip()
+                          if len(row) > 15:
+                              item["win_odds"] = row[15].strip()
+                          runners.append(item)
 
-          for track, cfg in tracks.items():
-              output["tracks"][track] = {}
-              for race_no in cfg["races"]:
-                  params = {
-                      "k_raceDate": race_date,
-                      "k_babaCode": cfg["code"],
-                      "k_raceNo": str(race_no),
+                  payouts = {k: [] for k in known_types}
+                  for table in tables[1:]:
+                      current = None
+                      for row in table:
+                          if not row:
+                              continue
+                          first = row[0].strip()
+                          if first in known_types:
+                              current = first
+                              vals = row[1:]
+                          elif current is not None:
+                              vals = row
+                          else:
+                              continue
+
+                          if current is None or len(vals) < 2:
+                              continue
+
+                          combo = vals[0].strip()
+                          payout = vals[1].strip()
+                          popularity = vals[2].strip() if len(vals) > 2 else ""
+                          if "円" not in payout:
+                              continue
+                          payouts[current].append({
+                              "combination": combo,
+                              "payout": payout,
+                              "popularity": popularity,
+                          })
+
+                  payouts = {k:v for k,v in payouts.items() if v}
+                  compact["tracks"][track][race_no] = {
+                      "url": race.get("url", ""),
+                      "runners": runners,
+                      "top3": [x for x in runners if x["rank"] in (1,2,3)],
+                      "payouts": payouts,
                   }
-                  url = base + "?" + urlencode(params)
-                  req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
-                  print("fetch", track, race_no, url)
-                  with urlopen(req, timeout=30) as res:
-                      raw = res.read()
 
-                  html = raw.decode("utf-8", errors="ignore")
-                  soup = BeautifulSoup(html, "html.parser")
-
-                  tables = []
-                  for table in soup.find_all("table"):
-                      rows = []
-                      for tr in table.find_all("tr"):
-                          cells = [
-                              cell.get_text(" ", strip=True)
-                              for cell in tr.find_all(["th", "td"])
-                          ]
-                          if cells:
-                              rows.append(cells)
-                      if rows:
-                          tables.append(rows)
-
-                  text = soup.get_text("\n", strip=True)
-
-                  output["tracks"][track][str(race_no)] = {
-                      "url": url,
-                      "title": soup.title.get_text(" ", strip=True) if soup.title else "",
-                      "tables": tables,
-                      "text": text,
-                  }
-                  time.sleep(0.3)
-
-          out = Path("data/2026-09-26/nar_results_tables_20260926.json")
-          out.parent.mkdir(parents=True, exist_ok=True)
+          out = Path("data/2026-09-26/nar_results_compact_20260926.json")
           out.write_text(
-              json.dumps(output, ensure_ascii=False, indent=2),
+              json.dumps(compact, ensure_ascii=False, indent=2),
               encoding="utf-8",
           )
           print("saved", out)
+          for track, races in compact["tracks"].items():
+              print(track, len(races), "races")
+              for rno, r in races.items():
+                  print(track, rno, [(x["rank"], x["horse_no"], x["horse_name"]) for x in r["top3"]])
           PY
 
-      - name: Commit fetched results
+      - name: Commit compact results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/2026-09-26/nar_results_tables_20260926.json
+          git add data/2026-09-26/nar_results_compact_20260926.json
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
-          git commit -m "Fetch official NAR results for 2026-09-26"
+          git commit -m "Build compact official NAR results for 2026-09-26"
           git pull --rebase origin main
           git push origin main

@@ -1,4 +1,4 @@
-name: Build 2026-09-26 NAR compact results
+name: Build 2026-09-26 validation inputs
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  build-compact:
+  build-validation-inputs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -20,116 +20,95 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Build compact official result file
+      - name: Build compact m10 odds for fixed predictions
         run: |
           python - <<'PY'
           from pathlib import Path
-          import json
+          import csv, json, itertools
 
-          src = Path("data/2026-09-26/nar_results_tables_20260926.json")
-          data = json.loads(src.read_text(encoding="utf-8"))
-
-          known_types = {
-              "単勝", "複勝", "枠連複", "枠連単",
-              "馬連複", "馬連単", "ワイド",
-              "三連複", "三連単"
+          preds = {
+              "saga": {
+                  2:[1,6,4,3], 3:[2,8,1,5], 4:[9,10,6,4],
+                  5:[5,9,3,6], 6:[7,4,8,1], 7:[3,8,9,2],
+                  8:[8,5,7,4], 9:[4,10,12,2], 10:[9,7,1,10],
+              },
+              "kochi": {
+                  1:[3,4,8,10], 2:[6,5,7,9], 3:[7,6,9,11],
+                  4:[4,7,2,3], 5:[6,2,7,8], 6:[7,8,2,5],
+                  7:[7,1,6,5], 8:[10,8,7,1], 9:[7,1,6,4],
+                  10:[9,5,6,8], 11:[12,2,10,5],
+              }
           }
 
-          compact = {
-              "race_date": data["race_date"],
-              "source": data["source"],
-              "tracks": {},
-          }
+          def norm(combo):
+              return "-".join(str(x) for x in sorted(int(v) for v in combo))
 
-          for track, races in data["tracks"].items():
-              compact["tracks"][track] = {}
-              for race_no, race in races.items():
-                  tables = race.get("tables", [])
-                  runners = []
-                  if tables:
-                      for row in tables[0][1:]:
-                          if len(row) < 4:
-                              continue
-                          rank_text = row[0].strip()
-                          horse_no = row[2].strip()
-                          horse_name = row[3].strip()
-                          if not horse_no.isdigit():
-                              continue
-                          item = {
-                              "rank": int(rank_text) if rank_text.isdigit() else None,
-                              "horse_no": int(horse_no),
-                              "horse_name": horse_name,
-                              "status": "" if rank_text.isdigit() else " ".join(row),
+          out = {"race_date":"2026-09-26","minutes_before":10,"tracks":{}}
+          base = Path("data/2026-09-26")
+
+          for track, races in preds.items():
+              path = base / f"{track}_daily_odds_20260926.csv"
+              relevant = {}
+              for rno, idx in races.items():
+                  for bet in ("馬連","ワイド"):
+                      for c in itertools.combinations(idx, 2):
+                          relevant[(rno,bet,norm(c))] = None
+                  for c in itertools.combinations(idx, 3):
+                      relevant[(rno,"三連複",norm(c))] = None
+
+              with path.open("r", newline="", encoding="utf-8-sig") as f:
+                  for row in csv.DictReader(f):
+                      try:
+                          rno = int(row["race_no"])
+                          minute = int(row["minutes_before"])
+                      except Exception:
+                          continue
+                      if minute != 10:
+                          continue
+                      key=(rno,row["bet_type"].strip(),norm(row["combination"].split("-")))
+                      if key not in relevant:
+                          continue
+                      prev=relevant[key]
+                      if prev is None or row["captured_at"] > prev["captured_at"]:
+                          relevant[key]={
+                              "captured_at":row["captured_at"],
+                              "source_time":row["source_time"],
+                              "combination":key[2],
+                              "odds_low":row["odds_low"],
+                              "odds_high":row["odds_high"],
+                              "popularity":row["popularity"],
                           }
-                          if len(row) > 14:
-                              item["popularity"] = row[14].strip()
-                          if len(row) > 15:
-                              item["win_odds"] = row[15].strip()
-                          runners.append(item)
 
-                  payouts = {k: [] for k in known_types}
-                  for table in tables[1:]:
-                      current = None
-                      for row in table:
-                          if not row:
-                              continue
-                          first = row[0].strip()
-                          if first in known_types:
-                              current = first
-                              vals = row[1:]
-                          elif current is not None:
-                              vals = row
-                          else:
-                              continue
+              track_out={}
+              for rno, idx in races.items():
+                  race_out={}
+                  for bet in ("馬連","ワイド","三連複"):
+                      rows=[]
+                      for (rr,bb,cc), val in relevant.items():
+                          if rr==rno and bb==bet and val is not None:
+                              rows.append(val)
+                      rows.sort(key=lambda x: tuple(map(int,x["combination"].split("-"))))
+                      race_out[bet]=rows
+                  track_out[str(rno)]=race_out
+              out["tracks"][track]=track_out
 
-                          if current is None or len(vals) < 2:
-                              continue
-
-                          combo = vals[0].strip()
-                          payout = vals[1].strip()
-                          popularity = vals[2].strip() if len(vals) > 2 else ""
-                          if "円" not in payout:
-                              continue
-                          payouts[current].append({
-                              "combination": combo,
-                              "payout": payout,
-                              "popularity": popularity,
-                          })
-
-                  payouts = {k:v for k,v in payouts.items() if v}
-                  compact["tracks"][track][race_no] = {
-                      "url": race.get("url", ""),
-                      "runners": runners,
-                      "top3": [x for x in runners if x["rank"] in (1,2,3)],
-                      "payouts": payouts,
-                  }
-
-          out = Path("data/2026-09-26/nar_results_compact_20260926.json")
-          out.write_text(
-              json.dumps(compact, ensure_ascii=False, indent=2),
-              encoding="utf-8",
-          )
-          print("saved", out)
-          for track, races in compact["tracks"].items():
-              print(track, len(races), "races")
-              for rno, r in races.items():
-                  print(track, rno, [(x["rank"], x["horse_no"], x["horse_name"]) for x in r["top3"]])
+          dest=base/"m10_fixed_prediction_odds_20260926.json"
+          dest.write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding="utf-8")
+          print("saved",dest)
+          for track,races in out["tracks"].items():
+              for rno,r in races.items():
+                  print(track,rno,{k:len(v) for k,v in r.items()})
           PY
 
-      - name: Commit compact results
+      - name: Commit validation inputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/2026-09-26/nar_results_compact_20260926.json
+          git add data/2026-09-26/m10_fixed_prediction_odds_20260926.json
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
-          git commit -m "Build compact official NAR results for 2026-09-26"
+          git commit -m "Build m10 odds inputs for 2026-09-26 validation"
           git pull --rebase origin main
           git push origin main

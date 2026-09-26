@@ -38,6 +38,18 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Seed source with existing public data
+        run: |
+          TODAY="$(TZ=Asia/Tokyo date +%F)"
+          mkdir -p "source/data/${TODAY}"
+
+          if [ -d "data/${TODAY}" ]; then
+            echo "Restore existing ${TODAY} data into source workspace"
+            cp -R "data/${TODAY}/." "source/data/${TODAY}/"
+          else
+            echo "No existing public data for ${TODAY}; start fresh"
+          fi
+
       - name: Fetch race schedules
         working-directory: source
         run: python fetch_schedule_all.py

@@ -1,11 +1,6 @@
 name: Public Odds Auto Capture
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/public_auto_capture.yml"
   workflow_dispatch:
   schedule:
     - cron: "*/5 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 * * *"
@@ -92,20 +87,6 @@ jobs:
           else
             echo "No source data directory for ${TODAY}"
           fi
-
-      - name: Repair 2026-09-26 daily merge
-        if: github.event_name == 'push'
-        run: |
-          REPAIR_DATE="2026-09-26"
-          mkdir -p "source/data/${REPAIR_DATE}"
-          cp -R "data/${REPAIR_DATE}/." "source/data/${REPAIR_DATE}/"
-
-          (
-            cd source
-            python merge_daily_odds_all.py "${REPAIR_DATE}"
-          )
-
-          find "source/data/${REPAIR_DATE}" -maxdepth 1 -type f -name "*_daily_odds_*.csv" -exec cp {} "data/${REPAIR_DATE}/" \;
 
       - name: Commit data
         run: |

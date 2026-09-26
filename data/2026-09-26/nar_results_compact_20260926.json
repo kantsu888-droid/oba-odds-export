@@ -1,0 +1,4002 @@
+{
+  "race_date": "2026/09/26",
+  "source": "NAR RaceMarkTable",
+  "tracks": {
+    "saga": {
+      "1": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=32&k_raceNo=1",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 5,
+            "horse_name": "マギサキルケー",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.3"
+          },
+          {
+            "rank": 2,
+            "horse_no": 4,
+            "horse_name": "カシノツキヨミ",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "11.0"
+          },
+          {
+            "rank": 3,
+            "horse_no": 1,
+            "horse_name": "テレストテソーロ",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "6.6"
+          },
+          {
+            "rank": 4,
+            "horse_no": 8,
+            "horse_name": "レディボンボン",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "5.3"
+          },
+          {
+            "rank": 5,
+            "horse_no": 6,
+            "horse_name": "マナクキニ",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "48.0"
+          },
+          {
+            "rank": 6,
+            "horse_no": 9,
+            "horse_name": "キセキノキセキ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "190.3"
+          },
+          {
+            "rank": 7,
+            "horse_no": 7,
+            "horse_name": "ハナイキブンブン",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "25.0"
+          },
+          {
+            "rank": 8,
+            "horse_no": 2,
+            "horse_name": "フクシマロイヤル",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "90.0"
+          },
+          {
+            "rank": 9,
+            "horse_no": 3,
+            "horse_name": "ウィンフラッグ",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "207.7"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 5,
+            "horse_name": "マギサキルケー",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.3"
+          },
+          {
+            "rank": 2,
+            "horse_no": 4,
+            "horse_name": "カシノツキヨミ",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "11.0"
+          },
+          {
+            "rank": 3,
+            "horse_no": 1,
+            "horse_name": "テレストテソーロ",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "6.6"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "4-5",
+              "payout": "750円",
+              "popularity": "3人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "4-5",
+              "payout": "310円",
+              "popularity": "3人気"
+            },
+            {
+              "combination": "1-5",
+              "payout": "180円",
+              "popularity": "2人気"
+            },
+            {
+              "combination": "1-4",
+              "payout": "550円",
+              "popularity": "9人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "5-4",
+              "payout": "940円",
+              "popularity": "3人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "5",
+              "payout": "130円",
+              "popularity": "1人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "4-5",
+              "payout": "810円",
+              "popularity": "3人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "5",
+              "payout": "120円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "4",
+              "payout": "260円",
+              "popularity": "5人気"
+            },
+            {
+              "combination": "1",
+              "payout": "160円",
+              "popularity": "3人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "1-4-5",
+              "payout": "670円",
+              "popularity": "2人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "5-4-1",
+              "payout": "3,110円",
+              "popularity": "10人気"
+            }
+          ]
+        }
+      },
+      "2": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=32&k_raceNo=2",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 1,
+            "horse_name": "サンライズハンター",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.0"
+          },
+          {
+            "rank": 2,
+            "horse_no": 3,
+            "horse_name": "ケイサンノーブル",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "6.6"
+          },
+          {
+            "rank": 3,
+            "horse_no": 10,
+            "horse_name": "アマイクチヅケ",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "16.6"
+          },
+          {
+            "rank": 4,
+            "horse_no": 9,
+            "horse_name": "ハッピーキングダム",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "112.3"
+          },
+          {
+            "rank": 5,
+            "horse_no": 6,
+            "horse_name": "エイトノット",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "81.3"
+          },
+          {
+            "rank": 6,
+            "horse_no": 5,
+            "horse_name": "ウルトラピース",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "70.8"
+          },
+          {
+            "rank": 7,
+            "horse_no": 11,
+            "horse_name": "ルージュパラディ",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "51.4"
+          },
+          {
+            "rank": 8,
+            "horse_no": 8,
+            "horse_name": "シシノステラ",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "212.5"
+          },
+          {
+            "rank": 9,
+            "horse_no": 2,
+            "horse_name": "ショーダンビギン",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "78.6"
+          },
+          {
+            "rank": 10,
+            "horse_no": 7,
+            "horse_name": "ノーブルアイガー",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "62.5"
+          },
+          {
+            "rank": null,
+            "horse_no": 4,
+            "horse_name": "クイーンパレス",
+            "status": "取消 4 4 クイーンパレス 佐賀 牝 4 54.0 飛田愛 （佐賀） 三小幸 －      ",
+            "popularity": "",
+            "win_odds": ""
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 1,
+            "horse_name": "サンライズハンター",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.0"
+          },
+          {
+            "rank": 2,
+            "horse_no": 3,
+            "horse_name": "ケイサンノーブル",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "6.6"
+          },
+          {
+            "rank": 3,
+            "horse_no": 10,
+            "horse_name": "アマイクチヅケ",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "16.6"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "1-3",
+              "payout": "190円",
+              "popularity": "1人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "1-3",
+              "payout": "130円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "1-10",
+              "payout": "170円",
+              "popularity": "2人気"
+            },
+            {
+              "combination": "3-10",
+              "payout": "290円",
+              "popularity": "3人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "1-3",
+              "payout": "240円",
+              "popularity": "1人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "1",
+              "payout": "100円",
+              "popularity": "1人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "1-3",
+              "payout": "210円",
+              "popularity": "1人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "1",
+              "payout": "100円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "3",
+              "payout": "130円",
+              "popularity": "3人気"
+            },
+            {
+              "combination": "10",
+              "payout": "110円",
+              "popularity": "2人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "1-3-10",
+              "payout": "390円",
+              "popularity": "1人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "1-3-10",
+              "payout": "630円",
+              "popularity": "1人気"
+            }
+          ]
+        }
+      },
+      "3": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=32&k_raceNo=3",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 2,
+            "horse_name": "ロードミッドナイト",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.0"
+          },
+          {
+            "rank": 2,
+            "horse_no": 5,
+            "horse_name": "ミュステーリオン",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "45.3"
+          },
+          {
+            "rank": 3,
+            "horse_no": 3,
+            "horse_name": "テイエムタリスマ",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.9"
+          },
+          {
+            "rank": 4,
+            "horse_no": 7,
+            "horse_name": "サンスイレン",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "40.7"
+          },
+          {
+            "rank": 5,
+            "horse_no": 1,
+            "horse_name": "エスシーアルベル",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "15.0"
+          },
+          {
+            "rank": 6,
+            "horse_no": 8,
+            "horse_name": "タイキマクスウェル",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "10.9"
+          },
+          {
+            "rank": 7,
+            "horse_no": 6,
+            "horse_name": "トリオンファーレ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "69.6"
+          },
+          {
+            "rank": 8,
+            "horse_no": 9,
+            "horse_name": "ビレッジシングル",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "46.2"
+          },
+          {
+            "rank": 9,
+            "horse_no": 4,
+            "horse_name": "ガルヴァナイズ",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "154.6"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 2,
+            "horse_name": "ロードミッドナイト",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.0"
+          },
+          {
+            "rank": 2,
+            "horse_no": 5,
+            "horse_name": "ミュステーリオン",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "45.3"
+          },
+          {
+            "rank": 3,
+            "horse_no": 3,
+            "horse_name": "テイエムタリスマ",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.9"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "2-5",
+              "payout": "2,410円",
+              "popularity": "6人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "2-5",
+              "payout": "590円",
+              "popularity": "10人気"
+            },
+            {
+              "combination": "2-3",
+              "payout": "120円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "3-5",
+              "payout": "700円",
+              "popularity": "12人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "2-5",
+              "payout": "4,260円",
+              "popularity": "13人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "2",
+              "payout": "200円",
+              "popularity": "2人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "2-5",
+              "payout": "2,920円",
+              "popularity": "6人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "2",
+              "payout": "110円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "5",
+              "payout": "510円",
+              "popularity": "8人気"
+            },
+            {
+              "combination": "3",
+              "payout": "130円",
+              "popularity": "2人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "2-3-5",
+              "payout": "1,040円",
+              "popularity": "4人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "2-5-3",
+              "payout": "7,930円",
+              "popularity": "24人気"
+            }
+          ]
+        }
+      },
+      "4": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=32&k_raceNo=4",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 12,
+            "horse_name": "ハンデンローリエ",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "81.6"
+          },
+          {
+            "rank": 2,
+            "horse_no": 6,
+            "horse_name": "レミギノテソーロ",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 9,
+            "horse_name": "フィールアライヴ",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "8.3"
+          },
+          {
+            "rank": 4,
+            "horse_no": 8,
+            "horse_name": "ニシノヒンメル",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "15.2"
+          },
+          {
+            "rank": 5,
+            "horse_no": 7,
+            "horse_name": "ミシャベル",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "62.5"
+          },
+          {
+            "rank": 6,
+            "horse_no": 2,
+            "horse_name": "メイショウポワロ",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "101.1"
+          },
+          {
+            "rank": 7,
+            "horse_no": 5,
+            "horse_name": "ユールメイキット",
+            "status": "",
+            "popularity": "11",
+            "win_odds": "150.3"
+          },
+          {
+            "rank": 8,
+            "horse_no": 4,
+            "horse_name": "ナンテヒダ",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "33.7"
+          },
+          {
+            "rank": 9,
+            "horse_no": 1,
+            "horse_name": "レドンホール",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "6.4"
+          },
+          {
+            "rank": 10,
+            "horse_no": 10,
+            "horse_name": "ラヴァルス",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "4.6"
+          },
+          {
+            "rank": 11,
+            "horse_no": 11,
+            "horse_name": "ブルームソング",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "5.6"
+          },
+          {
+            "rank": 12,
+            "horse_no": 3,
+            "horse_name": "スマートエミネンス",
+            "status": "",
+            "popularity": "12",
+            "win_odds": "234.6"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 12,
+            "horse_name": "ハンデンローリエ",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "81.6"
+          },
+          {
+            "rank": 2,
+            "horse_no": 6,
+            "horse_name": "レミギノテソーロ",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 9,
+            "horse_name": "フィールアライヴ",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "8.3"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "6-12",
+              "payout": "4,030円",
+              "popularity": "16人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "6-12",
+              "payout": "1,300円",
+              "popularity": "16人気"
+            },
+            {
+              "combination": "9-12",
+              "payout": "4,750円",
+              "popularity": "33人気"
+            },
+            {
+              "combination": "6-9",
+              "payout": "270円",
+              "popularity": "2人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "12-6",
+              "payout": "22,690円",
+              "popularity": "45人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "12",
+              "payout": "8,160円",
+              "popularity": "9人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "5-8",
+              "payout": "420円",
+              "popularity": "2人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "12",
+              "payout": "610円",
+              "popularity": "9人気"
+            },
+            {
+              "combination": "6",
+              "payout": "110円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "9",
+              "payout": "190円",
+              "popularity": "3人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "6-9-12",
+              "payout": "9,670円",
+              "popularity": "34人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "12-6-9",
+              "payout": "181,150円",
+              "popularity": "336人気"
+            }
+          ]
+        }
+      },
+      "5": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=32&k_raceNo=5",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 6,
+            "horse_name": "ヴァイスウィッチ",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "19.3"
+          },
+          {
+            "rank": 2,
+            "horse_no": 3,
+            "horse_name": "ジーティーノーブル",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "5.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 2,
+            "horse_name": "ノースグロリア",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.6"
+          },
+          {
+            "rank": 4,
+            "horse_no": 9,
+            "horse_name": "カシノハンゾウ",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "6.9"
+          },
+          {
+            "rank": 5,
+            "horse_no": 1,
+            "horse_name": "ミナミジュウジセイ",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "52.8"
+          },
+          {
+            "rank": 6,
+            "horse_no": 10,
+            "horse_name": "フェルカド",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "136.7"
+          },
+          {
+            "rank": 7,
+            "horse_no": 4,
+            "horse_name": "ギャレットルレーヴ",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "233.6"
+          },
+          {
+            "rank": 8,
+            "horse_no": 5,
+            "horse_name": "グエムル",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "83.8"
+          },
+          {
+            "rank": 9,
+            "horse_no": 7,
+            "horse_name": "イェルマーク",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "14.7"
+          },
+          {
+            "rank": 10,
+            "horse_no": 8,
+            "horse_name": "モリノカーニバル",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "7.6"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 6,
+            "horse_name": "ヴァイスウィッチ",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "19.3"
+          },
+          {
+            "rank": 2,
+            "horse_no": 3,
+            "horse_name": "ジーティーノーブル",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "5.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 2,
+            "horse_name": "ノースグロリア",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.6"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "3-6",
+              "payout": "2,970円",
+              "popularity": "9人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "3-6",
+              "payout": "620円",
+              "popularity": "9人気"
+            },
+            {
+              "combination": "2-6",
+              "payout": "310円",
+              "popularity": "5人気"
+            },
+            {
+              "combination": "2-3",
+              "payout": "140円",
+              "popularity": "1人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "6-3",
+              "payout": "6,490円",
+              "popularity": "20人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "6",
+              "payout": "1,930円",
+              "popularity": "6人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "3-6",
+              "payout": "3,080円",
+              "popularity": "8人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "6",
+              "payout": "300円",
+              "popularity": "6人気"
+            },
+            {
+              "combination": "3",
+              "payout": "130円",
+              "popularity": "2人気"
+            },
+            {
+              "combination": "2",
+              "payout": "110円",
+              "popularity": "1人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "2-3-6",
+              "payout": "1,010円",
+              "popularity": "3人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "6-3-2",
+              "payout": "13,790円",
+              "popularity": "44人気"
+            }
+          ]
+        }
+      },
+      "6": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=32&k_raceNo=6",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 2,
+            "horse_name": "ロベルタインパクト",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.1"
+          },
+          {
+            "rank": 2,
+            "horse_no": 7,
+            "horse_name": "フェブリノ",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 1,
+            "horse_name": "リヴァイデント",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "7.2"
+          },
+          {
+            "rank": 4,
+            "horse_no": 6,
+            "horse_name": "グラフ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "67.1"
+          },
+          {
+            "rank": 5,
+            "horse_no": 10,
+            "horse_name": "ドライカプチーノ",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "95.4"
+          },
+          {
+            "rank": 6,
+            "horse_no": 5,
+            "horse_name": "ジオパークピリカ",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "16.7"
+          },
+          {
+            "rank": 7,
+            "horse_no": 8,
+            "horse_name": "カシノメンコチャン",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "34.8"
+          },
+          {
+            "rank": 8,
+            "horse_no": 3,
+            "horse_name": "クリノマイスター",
+            "status": "",
+            "popularity": "12",
+            "win_odds": "201.9"
+          },
+          {
+            "rank": 9,
+            "horse_no": 4,
+            "horse_name": "スティルザワン",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "18.1"
+          },
+          {
+            "rank": 10,
+            "horse_no": 12,
+            "horse_name": "マーシャン",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "83.2"
+          },
+          {
+            "rank": 11,
+            "horse_no": 11,
+            "horse_name": "マリアブーケ",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "52.0"
+          },
+          {
+            "rank": 12,
+            "horse_no": 9,
+            "horse_name": "シュリーデービー",
+            "status": "",
+            "popularity": "11",
+            "win_odds": "121.5"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 2,
+            "horse_name": "ロベルタインパクト",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.1"
+          },
+          {
+            "rank": 2,
+            "horse_no": 7,
+            "horse_name": "フェブリノ",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 1,
+            "horse_name": "リヴァイデント",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "7.2"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "2-7",
+              "payout": "280円",
+              "popularity": "1人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "2-7",
+              "payout": "150円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "1-2",
+              "payout": "200円",
+              "popularity": "3人気"
+            },
+            {
+              "combination": "1-7",
+              "payout": "180円",
+              "popularity": "2人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "2-7",
+              "payout": "650円",
+              "popularity": "2人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "2",
+              "payout": "210円",
+              "popularity": "1人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "2-6",
+              "payout": "300円",
+              "popularity": "1人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "2",
+              "payout": "110円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "7",
+              "payout": "120円",
+              "popularity": "2人気"
+            },
+            {
+              "combination": "1",
+              "payout": "140円",
+              "popularity": "3人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "1-2-7",
+              "payout": "280円",
+              "popularity": "1人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "2-7-1",
+              "payout": "1,710円",
+              "popularity": "2人気"
+            }
+          ]
+        }
+      },
+      "7": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=32&k_raceNo=7",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 9,
+            "horse_name": "ノーブルビーチ",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "6.6"
+          },
+          {
+            "rank": 2,
+            "horse_no": 10,
+            "horse_name": "ヘルト",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "15.6"
+          },
+          {
+            "rank": 3,
+            "horse_no": 8,
+            "horse_name": "ヴィアトル",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "3.4"
+          },
+          {
+            "rank": 4,
+            "horse_no": 3,
+            "horse_name": "アスタイクウス",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.2"
+          },
+          {
+            "rank": 5,
+            "horse_no": 7,
+            "horse_name": "ファイナルソード",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "19.4"
+          },
+          {
+            "rank": 6,
+            "horse_no": 6,
+            "horse_name": "ワールドペコ",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "69.7"
+          },
+          {
+            "rank": 7,
+            "horse_no": 5,
+            "horse_name": "カシノエイサップ",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "8.8"
+          },
+          {
+            "rank": 8,
+            "horse_no": 2,
+            "horse_name": "ナッシングオンユー",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "28.3"
+          },
+          {
+            "rank": 9,
+            "horse_no": 4,
+            "horse_name": "レクエルド",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "18.8"
+          },
+          {
+            "rank": 10,
+            "horse_no": 1,
+            "horse_name": "パワポケチャンプ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "22.6"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 9,
+            "horse_name": "ノーブルビーチ",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "6.6"
+          },
+          {
+            "rank": 2,
+            "horse_no": 10,
+            "horse_name": "ヘルト",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "15.6"
+          },
+          {
+            "rank": 3,
+            "horse_no": 8,
+            "horse_name": "ヴィアトル",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "3.4"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "9-10",
+              "payout": "3,800円",
+              "popularity": "13人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "9-10",
+              "payout": "1,240円",
+              "popularity": "17人気"
+            },
+            {
+              "combination": "8-9",
+              "payout": "330円",
+              "popularity": "3人気"
+            },
+            {
+              "combination": "8-10",
+              "payout": "1,080円",
+              "popularity": "15人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "9-10",
+              "payout": "10,260円",
+              "popularity": "29人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "9",
+              "payout": "660円",
+              "popularity": "3人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "8-8",
+              "payout": "4,500円",
+              "popularity": "13人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "9",
+              "payout": "230円",
+              "popularity": "4人気"
+            },
+            {
+              "combination": "10",
+              "payout": "370円",
+              "popularity": "6人気"
+            },
+            {
+              "combination": "8",
+              "payout": "120円",
+              "popularity": "1人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "8-9-10",
+              "payout": "4,300円",
+              "popularity": "14人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "9-10-8",
+              "payout": "35,730円",
+              "popularity": "105人気"
+            }
+          ]
+        }
+      },
+      "8": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=32&k_raceNo=8",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 1,
+            "horse_name": "ユイアヴェニール",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.3"
+          },
+          {
+            "rank": 2,
+            "horse_no": 9,
+            "horse_name": "キタカラキタテンシ",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "18.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 4,
+            "horse_name": "アロガントシェイム",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "16.2"
+          },
+          {
+            "rank": 4,
+            "horse_no": 7,
+            "horse_name": "シャクイワナ",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "14.5"
+          },
+          {
+            "rank": 5,
+            "horse_no": 8,
+            "horse_name": "シュライバー",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "3.8"
+          },
+          {
+            "rank": 6,
+            "horse_no": 11,
+            "horse_name": "ヘキレキイッセン",
+            "status": "",
+            "popularity": "11",
+            "win_odds": "105.8"
+          },
+          {
+            "rank": 7,
+            "horse_no": 12,
+            "horse_name": "モスコビウム",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "45.5"
+          },
+          {
+            "rank": 8,
+            "horse_no": 5,
+            "horse_name": "ミヤファイター",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "6.6"
+          },
+          {
+            "rank": 9,
+            "horse_no": 2,
+            "horse_name": "ハルヨコイ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "44.3"
+          },
+          {
+            "rank": 10,
+            "horse_no": 6,
+            "horse_name": "ティアン",
+            "status": "",
+            "popularity": "12",
+            "win_odds": "456.2"
+          },
+          {
+            "rank": 11,
+            "horse_no": 3,
+            "horse_name": "アクアマリンブルー",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "95.4"
+          },
+          {
+            "rank": 12,
+            "horse_no": 10,
+            "horse_name": "アテナパルテノス",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "5.9"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 1,
+            "horse_name": "ユイアヴェニール",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.3"
+          },
+          {
+            "rank": 2,
+            "horse_no": 9,
+            "horse_name": "キタカラキタテンシ",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "18.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 4,
+            "horse_name": "アロガントシェイム",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "16.2"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "1-9",
+              "payout": "3,890円",
+              "popularity": "15人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "1-9",
+              "payout": "1,260円",
+              "popularity": "16人気"
+            },
+            {
+              "combination": "1-4",
+              "payout": "520円",
+              "popularity": "5人気"
+            },
+            {
+              "combination": "4-9",
+              "payout": "2,710円",
+              "popularity": "25人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "1-9",
+              "payout": "6,450円",
+              "popularity": "26人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "1",
+              "payout": "230円",
+              "popularity": "1人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "1-7",
+              "payout": "730円",
+              "popularity": "3人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "1",
+              "payout": "120円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "9",
+              "payout": "470円",
+              "popularity": "7人気"
+            },
+            {
+              "combination": "4",
+              "payout": "240円",
+              "popularity": "6人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "1-4-9",
+              "payout": "7,940円",
+              "popularity": "30人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "1-9-4",
+              "payout": "31,680円",
+              "popularity": "117人気"
+            }
+          ]
+        }
+      },
+      "9": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=32&k_raceNo=9",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 10,
+            "horse_name": "バリアシオン",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.5"
+          },
+          {
+            "rank": 2,
+            "horse_no": 12,
+            "horse_name": "アデニウム",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "6.8"
+          },
+          {
+            "rank": 3,
+            "horse_no": 6,
+            "horse_name": "マーティー",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "12.2"
+          },
+          {
+            "rank": 4,
+            "horse_no": 7,
+            "horse_name": "ロッピス",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "67.3"
+          },
+          {
+            "rank": 5,
+            "horse_no": 11,
+            "horse_name": "トラウムビルト",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "108.5"
+          },
+          {
+            "rank": 6,
+            "horse_no": 8,
+            "horse_name": "ケイアンプルール",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "101.6"
+          },
+          {
+            "rank": 7,
+            "horse_no": 4,
+            "horse_name": "ムーヴザクラウド",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "5.5"
+          },
+          {
+            "rank": 8,
+            "horse_no": 2,
+            "horse_name": "ピエノダモーレ",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "54.1"
+          },
+          {
+            "rank": 9,
+            "horse_no": 1,
+            "horse_name": "トウカイティエラ",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.8"
+          },
+          {
+            "rank": 10,
+            "horse_no": 9,
+            "horse_name": "ロイヤルキャピタル",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "22.0"
+          },
+          {
+            "rank": 11,
+            "horse_no": 5,
+            "horse_name": "クラリスヒメ",
+            "status": "",
+            "popularity": "12",
+            "win_odds": "333.2"
+          },
+          {
+            "rank": 12,
+            "horse_no": 3,
+            "horse_name": "マイホームヒロイン",
+            "status": "",
+            "popularity": "11",
+            "win_odds": "262.9"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 10,
+            "horse_name": "バリアシオン",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.5"
+          },
+          {
+            "rank": 2,
+            "horse_no": 12,
+            "horse_name": "アデニウム",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "6.8"
+          },
+          {
+            "rank": 3,
+            "horse_no": 6,
+            "horse_name": "マーティー",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "12.2"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "10-12",
+              "payout": "700円",
+              "popularity": "3人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "10-12",
+              "payout": "320円",
+              "popularity": "4人気"
+            },
+            {
+              "combination": "6-10",
+              "payout": "530円",
+              "popularity": "7人気"
+            },
+            {
+              "combination": "6-12",
+              "payout": "770円",
+              "popularity": "10人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "10-12",
+              "payout": "1,010円",
+              "popularity": "4人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "10",
+              "payout": "250円",
+              "popularity": "1人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "7-8",
+              "payout": "620円",
+              "popularity": "3人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "10",
+              "payout": "120円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "12",
+              "payout": "170円",
+              "popularity": "3人気"
+            },
+            {
+              "combination": "6",
+              "payout": "220円",
+              "popularity": "5人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "6-10-12",
+              "payout": "1,650円",
+              "popularity": "5人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "10-12-6",
+              "payout": "5,890円",
+              "popularity": "12人気"
+            }
+          ]
+        }
+      },
+      "10": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=32&k_raceNo=10",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 9,
+            "horse_name": "レジーナテンペスタ",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.4"
+          },
+          {
+            "rank": 2,
+            "horse_no": 13,
+            "horse_name": "スエズマックス",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "112.4"
+          },
+          {
+            "rank": 3,
+            "horse_no": 7,
+            "horse_name": "ワンダーエイド",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.6"
+          },
+          {
+            "rank": 4,
+            "horse_no": 10,
+            "horse_name": "ユイダイナソー",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "34.2"
+          },
+          {
+            "rank": 5,
+            "horse_no": 14,
+            "horse_name": "ピュアコレクション",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "67.6"
+          },
+          {
+            "rank": 6,
+            "horse_no": 2,
+            "horse_name": "メイショウハヤセ",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "14.2"
+          },
+          {
+            "rank": 7,
+            "horse_no": 8,
+            "horse_name": "レインチェック",
+            "status": "",
+            "popularity": "11",
+            "win_odds": "165.4"
+          },
+          {
+            "rank": 8,
+            "horse_no": 11,
+            "horse_name": "エメラルドシティー",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "79.1"
+          },
+          {
+            "rank": 9,
+            "horse_no": 6,
+            "horse_name": "ウインマグノリア",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "76.2"
+          },
+          {
+            "rank": 10,
+            "horse_no": 12,
+            "horse_name": "ベラジオソノダヒメ",
+            "status": "",
+            "popularity": "12",
+            "win_odds": "335.4"
+          },
+          {
+            "rank": 11,
+            "horse_no": 4,
+            "horse_name": "ダッテウマダモノ",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "45.8"
+          },
+          {
+            "rank": 12,
+            "horse_no": 3,
+            "horse_name": "メイショウトレック",
+            "status": "",
+            "popularity": "14",
+            "win_odds": "464.0"
+          },
+          {
+            "rank": 13,
+            "horse_no": 5,
+            "horse_name": "ビレッジティエーラ",
+            "status": "",
+            "popularity": "13",
+            "win_odds": "383.3"
+          },
+          {
+            "rank": 14,
+            "horse_no": 1,
+            "horse_name": "テイエムスワーブ",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "155.4"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 9,
+            "horse_name": "レジーナテンペスタ",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.4"
+          },
+          {
+            "rank": 2,
+            "horse_no": 13,
+            "horse_name": "スエズマックス",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "112.4"
+          },
+          {
+            "rank": 3,
+            "horse_no": 7,
+            "horse_name": "ワンダーエイド",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.6"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "9-13",
+              "payout": "7,800円",
+              "popularity": "13人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "9-13",
+              "payout": "1,300円",
+              "popularity": "16人気"
+            },
+            {
+              "combination": "7-9",
+              "payout": "130円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "7-13",
+              "payout": "1,330円",
+              "popularity": "18人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "9-13",
+              "payout": "8,660円",
+              "popularity": "16人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "9",
+              "payout": "140円",
+              "popularity": "1人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "6-8",
+              "payout": "2,350円",
+              "popularity": "5人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "9",
+              "payout": "110円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "13",
+              "payout": "550円",
+              "popularity": "8人気"
+            },
+            {
+              "combination": "7",
+              "payout": "120円",
+              "popularity": "2人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "7-9-13",
+              "payout": "2,220円",
+              "popularity": "7人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "9-13-7",
+              "payout": "24,080円",
+              "popularity": "47人気"
+            }
+          ]
+        }
+      }
+    },
+    "kochi": {
+      "1": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=31&k_raceNo=1",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 4,
+            "horse_name": "ツイスティドシルク",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "5.4"
+          },
+          {
+            "rank": 2,
+            "horse_no": 3,
+            "horse_name": "ロードベルファスト",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.3"
+          },
+          {
+            "rank": 3,
+            "horse_no": 8,
+            "horse_name": "メイショウゴウケツ",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "10.8"
+          },
+          {
+            "rank": 4,
+            "horse_no": 10,
+            "horse_name": "ファーストシーン",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "39.4"
+          },
+          {
+            "rank": 5,
+            "horse_no": 7,
+            "horse_name": "ハルウタ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "74.7"
+          },
+          {
+            "rank": 6,
+            "horse_no": 9,
+            "horse_name": "ジョウショーレーヴ",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "135.5"
+          },
+          {
+            "rank": 7,
+            "horse_no": 6,
+            "horse_name": "カイトヴァイター",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "8.0"
+          },
+          {
+            "rank": 8,
+            "horse_no": 1,
+            "horse_name": "シデレウス",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "88.1"
+          },
+          {
+            "rank": 9,
+            "horse_no": 2,
+            "horse_name": "アシャカバッハ",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "62.9"
+          },
+          {
+            "rank": 10,
+            "horse_no": 5,
+            "horse_name": "ソヴァージュ",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "34.9"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 4,
+            "horse_name": "ツイスティドシルク",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "5.4"
+          },
+          {
+            "rank": 2,
+            "horse_no": 3,
+            "horse_name": "ロードベルファスト",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.3"
+          },
+          {
+            "rank": 3,
+            "horse_no": 8,
+            "horse_name": "メイショウゴウケツ",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "10.8"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "3-4",
+              "payout": "260円",
+              "popularity": "1人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "3-4",
+              "payout": "140円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "4-8",
+              "payout": "320円",
+              "popularity": "4人気"
+            },
+            {
+              "combination": "3-8",
+              "payout": "160円",
+              "popularity": "2人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "4-3",
+              "payout": "720円",
+              "popularity": "4人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "4",
+              "payout": "540円",
+              "popularity": "2人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "3-4",
+              "payout": "220円",
+              "popularity": "1人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "4",
+              "payout": "120円",
+              "popularity": "2人気"
+            },
+            {
+              "combination": "3",
+              "payout": "100円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "8",
+              "payout": "160円",
+              "popularity": "4人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "3-4-8",
+              "payout": "370円",
+              "popularity": "1人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "4-3-8",
+              "payout": "1,880円",
+              "popularity": "4人気"
+            }
+          ]
+        }
+      },
+      "2": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=31&k_raceNo=2",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 6,
+            "horse_name": "モズガネシア",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.0"
+          },
+          {
+            "rank": 2,
+            "horse_no": 9,
+            "horse_name": "ナイトスナイパー",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "7.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 7,
+            "horse_name": "シティプロスパー",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "9.4"
+          },
+          {
+            "rank": 4,
+            "horse_no": 2,
+            "horse_name": "トサノセレナーデ",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "20.2"
+          },
+          {
+            "rank": 5,
+            "horse_no": 8,
+            "horse_name": "ユミッチラブ",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "118.0"
+          },
+          {
+            "rank": 6,
+            "horse_no": 1,
+            "horse_name": "バーニングホット",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "352.4"
+          },
+          {
+            "rank": 7,
+            "horse_no": 5,
+            "horse_name": "コスモアミュレット",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "119.3"
+          },
+          {
+            "rank": 8,
+            "horse_no": 4,
+            "horse_name": "ソレユケカツコ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "171.0"
+          },
+          {
+            "rank": 9,
+            "horse_no": 3,
+            "horse_name": "スノープリンス",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "150.0"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 6,
+            "horse_name": "モズガネシア",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.0"
+          },
+          {
+            "rank": 2,
+            "horse_no": 9,
+            "horse_name": "ナイトスナイパー",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "7.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 7,
+            "horse_name": "シティプロスパー",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "9.4"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "6-9",
+              "payout": "290円",
+              "popularity": "2人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "6-9",
+              "payout": "120円",
+              "popularity": "2人気"
+            },
+            {
+              "combination": "6-7",
+              "payout": "100円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "7-9",
+              "payout": "240円",
+              "popularity": "5人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "6-9",
+              "payout": "220円",
+              "popularity": "1人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "6",
+              "payout": "100円",
+              "popularity": "1人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "6-8",
+              "payout": "250円",
+              "popularity": "2人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "6",
+              "payout": "100円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "9",
+              "payout": "110円",
+              "popularity": "3人気"
+            },
+            {
+              "combination": "7",
+              "payout": "100円",
+              "popularity": "2人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "6-7-9",
+              "payout": "170円",
+              "popularity": "1人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "6-9-7",
+              "payout": "500円",
+              "popularity": "2人気"
+            }
+          ]
+        }
+      },
+      "3": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=31&k_raceNo=3",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 11,
+            "horse_name": "グリエールキック",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "12.3"
+          },
+          {
+            "rank": 2,
+            "horse_no": 10,
+            "horse_name": "ジョウショーブリエ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "69.7"
+          },
+          {
+            "rank": 3,
+            "horse_no": 8,
+            "horse_name": "シーザソング",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "24.7"
+          },
+          {
+            "rank": 4,
+            "horse_no": 4,
+            "horse_name": "シデンイッセン",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "37.3"
+          },
+          {
+            "rank": 5,
+            "horse_no": 9,
+            "horse_name": "キヨスリョウマ",
+            "status": "",
+            "popularity": "11",
+            "win_odds": "206.9"
+          },
+          {
+            "rank": 6,
+            "horse_no": 6,
+            "horse_name": "バリキング",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.2"
+          },
+          {
+            "rank": 7,
+            "horse_no": 7,
+            "horse_name": "フルフィルメント",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.8"
+          },
+          {
+            "rank": 8,
+            "horse_no": 3,
+            "horse_name": "ソックス",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "40.7"
+          },
+          {
+            "rank": 9,
+            "horse_no": 1,
+            "horse_name": "ワイドアルバ",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "91.0"
+          },
+          {
+            "rank": 10,
+            "horse_no": 5,
+            "horse_name": "フォレストターキン",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "139.8"
+          },
+          {
+            "rank": 11,
+            "horse_no": 2,
+            "horse_name": "フウリンカザン",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "25.6"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 11,
+            "horse_name": "グリエールキック",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "12.3"
+          },
+          {
+            "rank": 2,
+            "horse_no": 10,
+            "horse_name": "ジョウショーブリエ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "69.7"
+          },
+          {
+            "rank": 3,
+            "horse_no": 8,
+            "horse_name": "シーザソング",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "24.7"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "10-11",
+              "payout": "11,670円",
+              "popularity": "21人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "10-11",
+              "payout": "2,020円",
+              "popularity": "18人気"
+            },
+            {
+              "combination": "8-11",
+              "payout": "1,850円",
+              "popularity": "15人気"
+            },
+            {
+              "combination": "8-10",
+              "payout": "4,650円",
+              "popularity": "32人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "11-10",
+              "payout": "19,520円",
+              "popularity": "33人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "11",
+              "payout": "1,230円",
+              "popularity": "3人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "8-8",
+              "payout": "3,580円",
+              "popularity": "8人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "11",
+              "payout": "320円",
+              "popularity": "3人気"
+            },
+            {
+              "combination": "10",
+              "payout": "830円",
+              "popularity": "9人気"
+            },
+            {
+              "combination": "8",
+              "payout": "380円",
+              "popularity": "6人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "8-10-11",
+              "payout": "35,720円",
+              "popularity": "67人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "11-10-8",
+              "payout": "207,840円",
+              "popularity": "299人気"
+            }
+          ]
+        }
+      },
+      "4": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=31&k_raceNo=4",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 4,
+            "horse_name": "ウィズユアドリーム",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.8"
+          },
+          {
+            "rank": 2,
+            "horse_no": 8,
+            "horse_name": "ディベルティール",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "23.1"
+          },
+          {
+            "rank": 3,
+            "horse_no": 2,
+            "horse_name": "アプサラー",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "3.1"
+          },
+          {
+            "rank": 4,
+            "horse_no": 3,
+            "horse_name": "コスモシーウルフ",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "7.1"
+          },
+          {
+            "rank": 5,
+            "horse_no": 5,
+            "horse_name": "エイシンオッティモ",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "27.5"
+          },
+          {
+            "rank": 6,
+            "horse_no": 7,
+            "horse_name": "ゲンパチレオニダス",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "8.7"
+          },
+          {
+            "rank": 7,
+            "horse_no": 1,
+            "horse_name": "ハルノサムソン",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "28.4"
+          },
+          {
+            "rank": 8,
+            "horse_no": 6,
+            "horse_name": "メイショウオキビ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "74.1"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 4,
+            "horse_name": "ウィズユアドリーム",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.8"
+          },
+          {
+            "rank": 2,
+            "horse_no": 8,
+            "horse_name": "ディベルティール",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "23.1"
+          },
+          {
+            "rank": 3,
+            "horse_no": 2,
+            "horse_name": "アプサラー",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "3.1"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "4-8",
+              "payout": "1,860円",
+              "popularity": "6人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "4-8",
+              "payout": "570円",
+              "popularity": "8人気"
+            },
+            {
+              "combination": "2-4",
+              "payout": "170円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "2-8",
+              "payout": "780円",
+              "popularity": "10人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "4-8",
+              "payout": "2,380円",
+              "popularity": "7人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "4",
+              "payout": "180円",
+              "popularity": "1人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "4",
+              "payout": "100円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "8",
+              "payout": "260円",
+              "popularity": "5人気"
+            },
+            {
+              "combination": "2",
+              "payout": "130円",
+              "popularity": "2人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "2-4-8",
+              "payout": "1,080円",
+              "popularity": "3人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "4-8-2",
+              "payout": "7,350円",
+              "popularity": "21人気"
+            }
+          ]
+        }
+      },
+      "5": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=31&k_raceNo=5",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 6,
+            "horse_name": "エクセスリターン",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.0"
+          },
+          {
+            "rank": 2,
+            "horse_no": 7,
+            "horse_name": "スノーホルンロード",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.7"
+          },
+          {
+            "rank": 3,
+            "horse_no": 8,
+            "horse_name": "モルフェウス",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "17.5"
+          },
+          {
+            "rank": 4,
+            "horse_no": 4,
+            "horse_name": "スピードイエロー",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "183.2"
+          },
+          {
+            "rank": 5,
+            "horse_no": 5,
+            "horse_name": "クラックオブドーン",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "16.0"
+          },
+          {
+            "rank": 6,
+            "horse_no": 2,
+            "horse_name": "ベストディシジョン",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "4.8"
+          },
+          {
+            "rank": 7,
+            "horse_no": 1,
+            "horse_name": "ウォーターレモン",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "110.2"
+          },
+          {
+            "rank": 8,
+            "horse_no": 3,
+            "horse_name": "ストーミーデイ",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "18.4"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 6,
+            "horse_name": "エクセスリターン",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.0"
+          },
+          {
+            "rank": 2,
+            "horse_no": 7,
+            "horse_name": "スノーホルンロード",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.7"
+          },
+          {
+            "rank": 3,
+            "horse_no": 8,
+            "horse_name": "モルフェウス",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "17.5"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "6-7",
+              "payout": "260円",
+              "popularity": "1人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "6-7",
+              "payout": "150円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "6-8",
+              "payout": "290円",
+              "popularity": "4人気"
+            },
+            {
+              "combination": "7-8",
+              "payout": "320円",
+              "popularity": "5人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "6-7",
+              "payout": "530円",
+              "popularity": "1人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "6",
+              "payout": "200円",
+              "popularity": "1人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "6",
+              "payout": "100円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "7",
+              "payout": "120円",
+              "popularity": "2人気"
+            },
+            {
+              "combination": "8",
+              "payout": "170円",
+              "popularity": "4人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "6-7-8",
+              "payout": "690円",
+              "popularity": "2人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "6-7-8",
+              "payout": "2,040円",
+              "popularity": "2人気"
+            }
+          ]
+        }
+      },
+      "6": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=31&k_raceNo=6",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 8,
+            "horse_name": "コムルヴァン",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.7"
+          },
+          {
+            "rank": 2,
+            "horse_no": 3,
+            "horse_name": "サンブル",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 7,
+            "horse_name": "デルマタモン",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "10.7"
+          },
+          {
+            "rank": 4,
+            "horse_no": 6,
+            "horse_name": "マサハヤアン",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "113.3"
+          },
+          {
+            "rank": 5,
+            "horse_no": 5,
+            "horse_name": "セントキルダ",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "11.4"
+          },
+          {
+            "rank": 6,
+            "horse_no": 2,
+            "horse_name": "ブロードグリン",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "19.6"
+          },
+          {
+            "rank": 7,
+            "horse_no": 4,
+            "horse_name": "エムティパブロ",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "158.1"
+          },
+          {
+            "rank": null,
+            "horse_no": 1,
+            "horse_name": "チュラウェーブ",
+            "status": "取消 1 1 チュラウェーブ 高知 牡 8 57.0 郷間勇 （高知） 宮川浩 －      ",
+            "popularity": "",
+            "win_odds": ""
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 8,
+            "horse_name": "コムルヴァン",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.7"
+          },
+          {
+            "rank": 2,
+            "horse_no": 3,
+            "horse_name": "サンブル",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.2"
+          },
+          {
+            "rank": 3,
+            "horse_no": 7,
+            "horse_name": "デルマタモン",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "10.7"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "3-8",
+              "payout": "170円",
+              "popularity": "1人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "3-8",
+              "payout": "130円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "7-8",
+              "payout": "170円",
+              "popularity": "3人気"
+            },
+            {
+              "combination": "3-7",
+              "payout": "200円",
+              "popularity": "4人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "8-3",
+              "payout": "230円",
+              "popularity": "1人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "8",
+              "payout": "170円",
+              "popularity": "1人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "8",
+              "payout": "110円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "3",
+              "payout": "120円",
+              "popularity": "2人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "3-7-8",
+              "payout": "240円",
+              "popularity": "1人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "8-3-7",
+              "payout": "590円",
+              "popularity": "1人気"
+            }
+          ]
+        }
+      },
+      "7": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=31&k_raceNo=7",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 1,
+            "horse_name": "キーチデッドミラー",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.4"
+          },
+          {
+            "rank": 2,
+            "horse_no": 7,
+            "horse_name": "ナイトオブバンド",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.5"
+          },
+          {
+            "rank": 3,
+            "horse_no": 5,
+            "horse_name": "ハチキンムスメ",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "106.8"
+          },
+          {
+            "rank": 4,
+            "horse_no": 2,
+            "horse_name": "クラウンクーロン",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "88.6"
+          },
+          {
+            "rank": 5,
+            "horse_no": 3,
+            "horse_name": "ツウキンカイソク",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "121.4"
+          },
+          {
+            "rank": 6,
+            "horse_no": 8,
+            "horse_name": "ヨシュア",
+            "status": "",
+            "popularity": "11",
+            "win_odds": "134.3"
+          },
+          {
+            "rank": 7,
+            "horse_no": 11,
+            "horse_name": "ブルースター",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "28.0"
+          },
+          {
+            "rank": 8,
+            "horse_no": 4,
+            "horse_name": "トーケンタカハール",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "7.2"
+          },
+          {
+            "rank": 9,
+            "horse_no": 9,
+            "horse_name": "チュウワロンドン",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "22.8"
+          },
+          {
+            "rank": 10,
+            "horse_no": 6,
+            "horse_name": "クワッドマリニン",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "5.6"
+          },
+          {
+            "rank": 11,
+            "horse_no": 10,
+            "horse_name": "エイシンギアアップ",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "40.0"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 1,
+            "horse_name": "キーチデッドミラー",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.4"
+          },
+          {
+            "rank": 2,
+            "horse_no": 7,
+            "horse_name": "ナイトオブバンド",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.5"
+          },
+          {
+            "rank": 3,
+            "horse_no": 5,
+            "horse_name": "ハチキンムスメ",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "106.8"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "1-7",
+              "payout": "270円",
+              "popularity": "1人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "1-7",
+              "payout": "160円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "1-5",
+              "payout": "2,410円",
+              "popularity": "21人気"
+            },
+            {
+              "combination": "5-7",
+              "payout": "2,920円",
+              "popularity": "22人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "1-7",
+              "payout": "540円",
+              "popularity": "2人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "1",
+              "payout": "240円",
+              "popularity": "1人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "1-6",
+              "payout": "190円",
+              "popularity": "1人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "1",
+              "payout": "110円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "7",
+              "payout": "120円",
+              "popularity": "2人気"
+            },
+            {
+              "combination": "5",
+              "payout": "800円",
+              "popularity": "10人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "1-5-7",
+              "payout": "7,030円",
+              "popularity": "23人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "1-7-5",
+              "payout": "18,610円",
+              "popularity": "57人気"
+            }
+          ]
+        }
+      },
+      "8": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=31&k_raceNo=8",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 10,
+            "horse_name": "メイショウユズルハ",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.4"
+          },
+          {
+            "rank": 2,
+            "horse_no": 2,
+            "horse_name": "カントリービクター",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "13.6"
+          },
+          {
+            "rank": 3,
+            "horse_no": 7,
+            "horse_name": "ダノンルミエール",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "32.0"
+          },
+          {
+            "rank": 4,
+            "horse_no": 11,
+            "horse_name": "トドイワウィンド",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "86.8"
+          },
+          {
+            "rank": 5,
+            "horse_no": 8,
+            "horse_name": "プレシャスメノウ",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "3.0"
+          },
+          {
+            "rank": 6,
+            "horse_no": 4,
+            "horse_name": "ルナヴェローチェ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "140.5"
+          },
+          {
+            "rank": 7,
+            "horse_no": 5,
+            "horse_name": "パルメリータ",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "141.2"
+          },
+          {
+            "rank": 8,
+            "horse_no": 3,
+            "horse_name": "ペイシャニット",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "15.3"
+          },
+          {
+            "rank": 9,
+            "horse_no": 9,
+            "horse_name": "エターナルライズ",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "143.1"
+          },
+          {
+            "rank": 10,
+            "horse_no": 6,
+            "horse_name": "オブリマイラブ",
+            "status": "",
+            "popularity": "11",
+            "win_odds": "205.3"
+          },
+          {
+            "rank": 11,
+            "horse_no": 1,
+            "horse_name": "シンゼンシャイン",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "22.7"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 10,
+            "horse_name": "メイショウユズルハ",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "1.4"
+          },
+          {
+            "rank": 2,
+            "horse_no": 2,
+            "horse_name": "カントリービクター",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "13.6"
+          },
+          {
+            "rank": 3,
+            "horse_no": 7,
+            "horse_name": "ダノンルミエール",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "32.0"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "2-10",
+              "payout": "420円",
+              "popularity": "2人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "2-10",
+              "payout": "180円",
+              "popularity": "2人気"
+            },
+            {
+              "combination": "7-10",
+              "payout": "330円",
+              "popularity": "4人気"
+            },
+            {
+              "combination": "2-7",
+              "payout": "1,410円",
+              "popularity": "13人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "10-2",
+              "payout": "360円",
+              "popularity": "2人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "10",
+              "payout": "140円",
+              "popularity": "1人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "2-8",
+              "payout": "400円",
+              "popularity": "2人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "10",
+              "payout": "110円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "2",
+              "payout": "170円",
+              "popularity": "3人気"
+            },
+            {
+              "combination": "7",
+              "payout": "200円",
+              "popularity": "4人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "2-7-10",
+              "payout": "1,890円",
+              "popularity": "6人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "10-2-7",
+              "payout": "3,050円",
+              "popularity": "6人気"
+            }
+          ]
+        }
+      },
+      "9": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=31&k_raceNo=9",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 7,
+            "horse_name": "リューノス",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "16.0"
+          },
+          {
+            "rank": 2,
+            "horse_no": 6,
+            "horse_name": "ビックス",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "26.0"
+          },
+          {
+            "rank": 3,
+            "horse_no": 1,
+            "horse_name": "ヒマワリクン",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "15.0"
+          },
+          {
+            "rank": 4,
+            "horse_no": 4,
+            "horse_name": "ムサシフウジン",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "8.9"
+          },
+          {
+            "rank": 5,
+            "horse_no": 8,
+            "horse_name": "メイショウカゼマチ",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.4"
+          },
+          {
+            "rank": 6,
+            "horse_no": 2,
+            "horse_name": "サーブルミラージュ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "49.9"
+          },
+          {
+            "rank": 7,
+            "horse_no": 5,
+            "horse_name": "ミラクルドリーム",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "2.5"
+          },
+          {
+            "rank": 8,
+            "horse_no": 3,
+            "horse_name": "ロイズピーク",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "6.8"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 7,
+            "horse_name": "リューノス",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "16.0"
+          },
+          {
+            "rank": 2,
+            "horse_no": 6,
+            "horse_name": "ビックス",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "26.0"
+          },
+          {
+            "rank": 3,
+            "horse_no": 1,
+            "horse_name": "ヒマワリクン",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "15.0"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "6-7",
+              "payout": "17,400円",
+              "popularity": "24人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "6-7",
+              "payout": "3,450円",
+              "popularity": "23人気"
+            },
+            {
+              "combination": "1-7",
+              "payout": "2,030円",
+              "popularity": "18人気"
+            },
+            {
+              "combination": "1-6",
+              "payout": "3,960円",
+              "popularity": "25人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "7-6",
+              "payout": "36,100円",
+              "popularity": "46人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "7",
+              "payout": "1,600円",
+              "popularity": "6人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "7",
+              "payout": "260円",
+              "popularity": "6人気"
+            },
+            {
+              "combination": "6",
+              "payout": "600円",
+              "popularity": "7人気"
+            },
+            {
+              "combination": "1",
+              "payout": "240円",
+              "popularity": "5人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "1-6-7",
+              "payout": "38,950円",
+              "popularity": "53人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "7-6-1",
+              "payout": "409,250円",
+              "popularity": "302人気"
+            }
+          ]
+        }
+      },
+      "10": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=31&k_raceNo=10",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 7,
+            "horse_name": "ビステル",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "35.3"
+          },
+          {
+            "rank": 2,
+            "horse_no": 1,
+            "horse_name": "クスダマ",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "3.5"
+          },
+          {
+            "rank": 3,
+            "horse_no": 2,
+            "horse_name": "ユキノマリア",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "54.6"
+          },
+          {
+            "rank": 4,
+            "horse_no": 9,
+            "horse_name": "リーチアディール",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "3.4"
+          },
+          {
+            "rank": 5,
+            "horse_no": 10,
+            "horse_name": "ショウサンキズナ",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "24.4"
+          },
+          {
+            "rank": 6,
+            "horse_no": 8,
+            "horse_name": "デルマアズラエル",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "13.0"
+          },
+          {
+            "rank": 7,
+            "horse_no": 5,
+            "horse_name": "イナフセド",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "18.2"
+          },
+          {
+            "rank": 8,
+            "horse_no": 6,
+            "horse_name": "ガラパゴス",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "3.4"
+          },
+          {
+            "rank": 9,
+            "horse_no": 4,
+            "horse_name": "サンダーゼウス",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "6.6"
+          },
+          {
+            "rank": 10,
+            "horse_no": 3,
+            "horse_name": "セイウンガレオン",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "49.5"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 7,
+            "horse_name": "ビステル",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "35.3"
+          },
+          {
+            "rank": 2,
+            "horse_no": 1,
+            "horse_name": "クスダマ",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "3.5"
+          },
+          {
+            "rank": 3,
+            "horse_no": 2,
+            "horse_name": "ユキノマリア",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "54.6"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "1-7",
+              "payout": "6,450円",
+              "popularity": "22人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "1-7",
+              "payout": "2,140円",
+              "popularity": "23人気"
+            },
+            {
+              "combination": "2-7",
+              "payout": "10,410円",
+              "popularity": "45人気"
+            },
+            {
+              "combination": "1-2",
+              "payout": "3,070円",
+              "popularity": "28人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "7-1",
+              "payout": "18,740円",
+              "popularity": "50人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "7",
+              "payout": "3,530円",
+              "popularity": "8人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "1-7",
+              "payout": "2,050円",
+              "popularity": "9人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "7",
+              "payout": "690円",
+              "popularity": "9人気"
+            },
+            {
+              "combination": "1",
+              "payout": "150円",
+              "popularity": "1人気"
+            },
+            {
+              "combination": "2",
+              "payout": "650円",
+              "popularity": "8人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "1-2-7",
+              "payout": "48,930円",
+              "popularity": "98人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "7-1-2",
+              "payout": "342,970円",
+              "popularity": "546人気"
+            }
+          ]
+        }
+      },
+      "11": {
+        "url": "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceMarkTable?k_raceDate=2026%2F09%2F26&k_babaCode=31&k_raceNo=11",
+        "runners": [
+          {
+            "rank": 1,
+            "horse_no": 2,
+            "horse_name": "ホットロッドスター",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "14.2"
+          },
+          {
+            "rank": 2,
+            "horse_no": 10,
+            "horse_name": "クリュメノス",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "20.7"
+          },
+          {
+            "rank": 3,
+            "horse_no": 6,
+            "horse_name": "クレインヴォイス",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "13.5"
+          },
+          {
+            "rank": 4,
+            "horse_no": 8,
+            "horse_name": "シシランマン",
+            "status": "",
+            "popularity": "4",
+            "win_odds": "10.4"
+          },
+          {
+            "rank": 5,
+            "horse_no": 5,
+            "horse_name": "モズラストセール",
+            "status": "",
+            "popularity": "11",
+            "win_odds": "36.0"
+          },
+          {
+            "rank": 6,
+            "horse_no": 3,
+            "horse_name": "プリティスーチャン",
+            "status": "",
+            "popularity": "2",
+            "win_odds": "5.7"
+          },
+          {
+            "rank": 7,
+            "horse_no": 4,
+            "horse_name": "エアロノート",
+            "status": "",
+            "popularity": "3",
+            "win_odds": "6.7"
+          },
+          {
+            "rank": 8,
+            "horse_no": 7,
+            "horse_name": "ショウナンアンバー",
+            "status": "",
+            "popularity": "9",
+            "win_odds": "16.9"
+          },
+          {
+            "rank": 9,
+            "horse_no": 1,
+            "horse_name": "キーゴールド",
+            "status": "",
+            "popularity": "12",
+            "win_odds": "41.9"
+          },
+          {
+            "rank": 10,
+            "horse_no": 9,
+            "horse_name": "ミアソレイユ",
+            "status": "",
+            "popularity": "5",
+            "win_odds": "12.5"
+          },
+          {
+            "rank": 11,
+            "horse_no": 11,
+            "horse_name": "リジョイシファイ",
+            "status": "",
+            "popularity": "8",
+            "win_odds": "16.2"
+          },
+          {
+            "rank": 12,
+            "horse_no": 12,
+            "horse_name": "アカリボーイ",
+            "status": "",
+            "popularity": "1",
+            "win_odds": "2.5"
+          }
+        ],
+        "top3": [
+          {
+            "rank": 1,
+            "horse_no": 2,
+            "horse_name": "ホットロッドスター",
+            "status": "",
+            "popularity": "7",
+            "win_odds": "14.2"
+          },
+          {
+            "rank": 2,
+            "horse_no": 10,
+            "horse_name": "クリュメノス",
+            "status": "",
+            "popularity": "10",
+            "win_odds": "20.7"
+          },
+          {
+            "rank": 3,
+            "horse_no": 6,
+            "horse_name": "クレインヴォイス",
+            "status": "",
+            "popularity": "6",
+            "win_odds": "13.5"
+          }
+        ],
+        "payouts": {
+          "馬連複": [
+            {
+              "combination": "2-10",
+              "payout": "12,070円",
+              "popularity": "46人気"
+            }
+          ],
+          "ワイド": [
+            {
+              "combination": "2-10",
+              "payout": "3,200円",
+              "popularity": "45人気"
+            },
+            {
+              "combination": "2-6",
+              "payout": "1,640円",
+              "popularity": "19人気"
+            },
+            {
+              "combination": "6-10",
+              "payout": "3,410円",
+              "popularity": "49人気"
+            }
+          ],
+          "馬連単": [
+            {
+              "combination": "2-10",
+              "payout": "22,700円",
+              "popularity": "83人気"
+            }
+          ],
+          "単勝": [
+            {
+              "combination": "2",
+              "payout": "1,420円",
+              "popularity": "7人気"
+            }
+          ],
+          "枠連複": [
+            {
+              "combination": "2-7",
+              "payout": "5,010円",
+              "popularity": "20人気"
+            }
+          ],
+          "複勝": [
+            {
+              "combination": "2",
+              "payout": "360円",
+              "popularity": "4人気"
+            },
+            {
+              "combination": "10",
+              "payout": "860円",
+              "popularity": "11人気"
+            },
+            {
+              "combination": "6",
+              "payout": "400円",
+              "popularity": "5人気"
+            }
+          ],
+          "三連複": [
+            {
+              "combination": "2-6-10",
+              "payout": "34,030円",
+              "popularity": "137人気"
+            }
+          ],
+          "三連単": [
+            {
+              "combination": "2-10-6",
+              "payout": "235,420円",
+              "popularity": "748人気"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

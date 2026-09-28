@@ -2,8 +2,16 @@ name: Public Odds Auto Capture
 
 on:
   workflow_dispatch:
+  # All times are JST. Run every day regardless of weekday.
+  # 09:45 discovers today's meetings.
+  # 10:00-20:55 covers the NAR sales window at 5-minute cadence.
+  # 21:00 is a final safety run for late races.
   schedule:
-    - cron: "*/5 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 * * *"
+    - cron: "45 9 * * *"
+      timezone: "Asia/Tokyo"
+    - cron: "*/5 10-20 * * *"
+      timezone: "Asia/Tokyo"
+    - cron: "0 21 * * *"
       timezone: "Asia/Tokyo"
 
 permissions:
@@ -50,14 +58,27 @@ jobs:
             echo "No existing public data for ${TODAY}; start fresh"
           fi
 
-      - name: Fetch race schedules
+      - name: Ensure today's all-track schedule exists
         working-directory: source
-        run: python fetch_schedule_all.py
+        shell: bash
+        run: |
+          TODAY="$(TZ=Asia/Tokyo date +%F)"
+          mkdir -p "data/${TODAY}"
+
+          if compgen -G "data/${TODAY}/all_schedule_*.csv" > /dev/null; then
+            echo "Today's schedule already exists."
+          else
+            echo "Scanning all six target tracks for ${TODAY}."
+            python fetch_schedule_all.py
+          fi
 
       - name: Capture odds without private-repository pushes
+        id: capture
         working-directory: source
+        shell: bash
         run: |
-          python - <<'PY'
+          set -o pipefail
+          python - <<'PY' | tee /tmp/public_auto_capture.log
           import auto_capture_all
 
           def skip_private_push(target_dt):
@@ -70,7 +91,14 @@ jobs:
           auto_capture_all.main()
           PY
 
+          if grep -q '^OK  ' /tmp/public_auto_capture.log; then
+            echo "captured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "captured=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Merge daily odds
+        if: steps.capture.outputs.captured == 'true'
         working-directory: source
         run: python merge_daily_odds_all.py
 

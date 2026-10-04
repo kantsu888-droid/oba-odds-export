@@ -29,9 +29,17 @@ def next_dispatch(
     relay_max_seconds: int = 5400,
     dispatch_lead_seconds: int = 480,
     max_late_seconds: int = 120,
+    keepalive_when_idle: bool = False,
 ) -> dict[str, Any]:
     schedules = sorted(data_dir.glob("all_schedule_*.csv"))
     if not schedules:
+        if keepalive_when_idle:
+            return {
+                "status": "idle_relay",
+                "reason": "no_schedule",
+                "delay_seconds": relay_max_seconds,
+                "next_target": None,
+            }
         return {
             "status": "no_schedule",
             "delay_seconds": None,
@@ -64,6 +72,14 @@ def next_dispatch(
                 targets.append(target)
 
     if not targets:
+        if keepalive_when_idle:
+            return {
+                "status": "idle_relay",
+                "reason": "no_future_targets",
+                "delay_seconds": relay_max_seconds,
+                "next_target": None,
+                "schedule": schedule.name,
+            }
         return {
             "status": "no_future_targets",
             "delay_seconds": None,
@@ -91,6 +107,7 @@ def main() -> None:
     ap.add_argument("--dispatch-lead-seconds", type=int, default=480)
     ap.add_argument("--max-late-seconds", type=int, default=120)
     ap.add_argument("--delay-only", action="store_true")
+    ap.add_argument("--keepalive-when-idle", action="store_true")
     args = ap.parse_args()
 
     out = next_dispatch(
@@ -99,6 +116,7 @@ def main() -> None:
         relay_max_seconds=args.relay_max_seconds,
         dispatch_lead_seconds=args.dispatch_lead_seconds,
         max_late_seconds=args.max_late_seconds,
+        keepalive_when_idle=args.keepalive_when_idle,
     )
     if args.delay_only:
         value = out["delay_seconds"]

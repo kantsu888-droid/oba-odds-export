@@ -97,5 +97,35 @@ class NextCaptureDispatchTest(unittest.TestCase):
             self.assertEqual(out["schedule"], "all_schedule_120000.csv")
 
 
+    def test_idle_keepalive_relay_after_last_target(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self.write_schedule(root, "all_schedule_100000.csv", "18:35")
+            for m, t in [(30, "180500"), (15, "182000"), (10, "182500"), (5, "183000"), (2, "183300")]:
+                (root / f"oi_1R_m{m}_{t}_odds.csv").write_text(
+                    "captured\n",
+                    encoding="utf-8",
+                )
+            out = next_dispatch(
+                data_dir=root,
+                now=datetime.fromisoformat("2026-10-06T20:00:00+09:00"),
+                keepalive_when_idle=True,
+            )
+            self.assertEqual(out["status"], "idle_relay")
+            self.assertEqual(out["reason"], "no_future_targets")
+            self.assertEqual(out["delay_seconds"], 5400)
+
+    def test_idle_keepalive_relay_without_schedule(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            out = next_dispatch(
+                data_dir=root,
+                now=datetime.fromisoformat("2026-10-07T01:00:00+09:00"),
+                keepalive_when_idle=True,
+            )
+            self.assertEqual(out["status"], "idle_relay")
+            self.assertEqual(out["reason"], "no_schedule")
+            self.assertEqual(out["delay_seconds"], 5400)
+
 if __name__ == "__main__":
     unittest.main()

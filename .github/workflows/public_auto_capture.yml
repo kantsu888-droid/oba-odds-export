@@ -3,15 +3,17 @@ name: Public Odds Auto Capture
 on:
   workflow_dispatch:
   # All times are JST. Run every day regardless of weekday.
-  # 09:45 discovers today's meetings.
-  # 10:00-20:55 covers the NAR sales window at 5-minute cadence.
-  # 21:00 is a final safety run for late races.
+  # Offset from the top of the hour because GitHub notes scheduled runs can
+  # be delayed or dropped during high load around :00.
+  # 09:47 discovers today's meetings.
+  # 10:02-20:57 covers the NAR sales window at 5-minute cadence.
+  # 21:02 is a final safety run for late races.
   schedule:
-    - cron: "45 9 * * *"
+    - cron: "47 9 * * *"
       timezone: "Asia/Tokyo"
-    - cron: "*/5 10-20 * * *"
+    - cron: "2/5 10-20 * * *"
       timezone: "Asia/Tokyo"
-    - cron: "0 21 * * *"
+    - cron: "2 21 * * *"
       timezone: "Asia/Tokyo"
 
 permissions:

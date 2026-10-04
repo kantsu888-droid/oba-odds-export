@@ -117,8 +117,11 @@ jobs:
           echo "Refresh all six target tracks for ${TODAY}."
           if python fetch_schedule_all.py; then
             echo "Schedule refresh succeeded."
+          elif [ -f "docs/soi_prospective_activation_v1.json" ]; then
+            echo "Schedule refresh failed after prospective activation; fail closed."
+            exit 1
           elif compgen -G "data/${TODAY}/all_schedule_*.csv" > /dev/null; then
-            echo "Schedule refresh failed; retain the latest existing schedule."
+            echo "Pre-activation schedule refresh failed; retain latest existing schedule for dry-run only."
           else
             echo "Schedule refresh failed and no prior schedule exists."
             exit 1

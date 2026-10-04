@@ -97,6 +97,65 @@ jobs:
             echo "captured=false" >> "$GITHUB_OUTPUT"
           fi
 
+          if grep -Eq '^OK  .* m15
+      - name: Merge daily odds
+        if: steps.capture.outputs.captured == 'true'
+        working-directory: source
+        run: python merge_daily_odds_all.py
+
+      - name: Sync public repository
+        run: git pull --rebase origin main
+
+      - name: Copy today's data
+        run: |
+          TODAY="$(TZ=Asia/Tokyo date +%F)"
+          mkdir -p "data/${TODAY}"
+
+          if [ -d "source/data/${TODAY}" ]; then
+            cp -R "source/data/${TODAY}/." "data/${TODAY}/"
+          else
+            echo "No source data directory for ${TODAY}"
+          fi
+
+      - name: Commit data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/
+
+          if git diff --cached --quiet; then
+            echo "No new data"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git commit -m "Update odds data"
+
+          for attempt in 1 2 3; do
+            echo "Push attempt ${attempt}/3"
+
+            if git pull --rebase origin main && git push origin main; then
+              echo "Public data pushed successfully"
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+
+            git rebase --abort || true
+            sleep 5
+          done
+
+          echo "Failed to push public data after 3 attempts"
+          exit 1
+ /tmp/public_auto_capture.log; then
+            echo "m15_captured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "m15_captured=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Merge daily odds
         if: steps.capture.outputs.captured == 'true'
         working-directory: source
@@ -144,3 +203,53 @@ jobs:
 
           echo "Failed to push public data after 3 attempts"
           exit 1
+
+      - name: Notify private SOI m15 ingester
+        if: steps.capture.outputs.m15_captured == 'true' && steps.commit.outputs.changed == 'true'
+        env:
+          SOURCE_PAT: ${{ secrets.SOURCE_PAT }}
+          EXPORT_COMMIT: ${{ steps.commit.outputs.commit_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET_DATE="$(TZ=Asia/Tokyo date +%F)"
+          export TARGET_DATE
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          token = os.environ["SOURCE_PAT"]
+          target_date = os.environ["TARGET_DATE"]
+          export_commit = os.environ["EXPORT_COMMIT"]
+
+          body = json.dumps({
+              "event_type": "soi_m15_ready",
+              "client_payload": {
+                  "target_date": target_date,
+                  "export_commit": export_commit,
+              },
+          }).encode("utf-8")
+
+          req = urllib.request.Request(
+              "https://api.github.com/repos/kantsu888-droid/oba-odds/dispatches",
+              data=body,
+              method="POST",
+              headers={
+                  "Authorization": f"Bearer {token}",
+                  "Accept": "application/vnd.github+json",
+                  "X-GitHub-Api-Version": "2022-11-28",
+                  "User-Agent": "oba-odds-export-m15-dispatch",
+                  "Content-Type": "application/json",
+              },
+          )
+          with urllib.request.urlopen(req, timeout=30) as response:
+              if response.status != 204:
+                  raise SystemExit(
+                      f"repository_dispatch failed: HTTP {response.status}"
+                  )
+          print(
+              "Dispatched soi_m15_ready for "
+              f"{target_date} @ {export_commit}"
+          )
+          PY

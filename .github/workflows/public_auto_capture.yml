@@ -2,6 +2,13 @@ name: Public Odds Auto Capture
 
 on:
   workflow_dispatch:
+  # Emergency/manual trigger that needs only a normal git push. Updating a
+  # file under ops/capture-trigger/ runs the same capture path without a
+  # cross-repository Actions API token.
+  push:
+    branches: [main]
+    paths:
+      - "ops/capture-trigger/**"
   # All times are JST. Run every day regardless of weekday.
   # Offset from the top of the hour because GitHub notes scheduled runs can
   # be delayed or dropped during high load around :00.

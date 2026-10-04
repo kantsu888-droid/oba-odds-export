@@ -58,6 +58,7 @@ jobs:
           ACTIVATION="source/docs/soi_prospective_activation_v1.json"
           if [ ! -f "$ACTIVATION" ]; then
             echo "Prospective not activated; workflow pin check is inert."
+            echo "PUBLIC_WORKFLOW_PIN=$GITHUB_WORKFLOW_SHA" >> "$GITHUB_ENV"
             exit 0
           fi
 
@@ -85,6 +86,7 @@ jobs:
             echo "Current public capture workflow differs from activation pin."
             exit 1
           fi
+          echo "PUBLIC_WORKFLOW_PIN=$PINNED" >> "$GITHUB_ENV"
           echo "Activated public workflow pin verified: $PINNED"
 
       - name: Set up Python
@@ -263,7 +265,7 @@ jobs:
           mkdir -p "data/soi_commitments/${TODAY}"
           COMMITMENT_PATH="data/soi_commitments/${TODAY}/${EXPORT_COMMIT}.json"
 
-          python source/soi_prospective_public_commitment.py             --receipt-root /tmp/soi-prospective             --target-date "$TODAY"             --public-odds-commit "$EXPORT_COMMIT"             --private-source-commit "$PRIVATE_SOURCE_COMMIT"             --public-workflow-commit "$GITHUB_WORKFLOW_SHA"             --output "$COMMITMENT_PATH"
+          python source/soi_prospective_public_commitment.py             --receipt-root /tmp/soi-prospective             --target-date "$TODAY"             --public-odds-commit "$EXPORT_COMMIT"             --private-source-commit "$PRIVATE_SOURCE_COMMIT"             --public-workflow-commit "$PUBLIC_WORKFLOW_PIN"             --output "$COMMITMENT_PATH"
 
           {
             echo "# SOI m15 prospective dry-run / commitment"

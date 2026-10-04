@@ -97,11 +97,38 @@ jobs:
             echo "captured=false" >> "$GITHUB_OUTPUT"
           fi
 
-          if grep -Eq '^OK  .* m15$' /tmp/public_auto_capture.log; then
-            echo "m15_captured=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "m15_captured=false" >> "$GITHUB_OUTPUT"
-          fi
+          python - <<'PY'
+          import os
+          import re
+
+          races = []
+          seen = set()
+          with open(
+              "/tmp/public_auto_capture.log",
+              encoding="utf-8",
+              errors="replace",
+          ) as f:
+              for line in f:
+                  match = re.match(
+                      r"^OK\s+(\S+)\s+(\d+)R\s+m15\s*$",
+                      line,
+                  )
+                  if not match:
+                      continue
+                  key = f"{match.group(1)}:{int(match.group(2))}"
+                  if key not in seen:
+                      seen.add(key)
+                      races.append(key)
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(
+                  "m15_captured="
+                  + ("true" if races else "false")
+                  + "\n"
+              )
+              f.write("m15_races=" + ",".join(races) + "\n")
+          print("New m15 races:", ",".join(races) if races else "none")
+          PY
 
       - name: Merge daily odds
         if: steps.capture.outputs.captured == 'true'
@@ -125,6 +152,7 @@ jobs:
       - name: Commit data
         id: commit
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -156,52 +184,73 @@ jobs:
           echo "Failed to push public data after 3 attempts"
           exit 1
 
-      - name: Notify private SOI m15 ingester
+      - name: Build pre-race SOI public commitment
         if: steps.capture.outputs.m15_captured == 'true' && steps.commit.outputs.changed == 'true'
         env:
-          SOURCE_PAT: ${{ secrets.SOURCE_PAT }}
           EXPORT_COMMIT: ${{ steps.commit.outputs.commit_sha }}
+          M15_RACES: ${{ steps.capture.outputs.m15_races }}
         shell: bash
         run: |
           set -euo pipefail
-          TARGET_DATE="$(TZ=Asia/Tokyo date +%F)"
-          export TARGET_DATE
-          python - <<'PY'
-          import json
-          import os
-          import urllib.request
+          TODAY="$(TZ=Asia/Tokyo date +%F)"
+          PRIVATE_SOURCE_COMMIT="$(git -C source rev-parse HEAD)"
 
-          token = os.environ["SOURCE_PAT"]
-          target_date = os.environ["TARGET_DATE"]
-          export_commit = os.environ["EXPORT_COMMIT"]
+          rm -rf /tmp/soi-prospective
+          mkdir -p /tmp/soi-prospective
 
-          body = json.dumps({
-              "event_type": "soi_m15_ready",
-              "client_payload": {
-                  "target_date": target_date,
-                  "export_commit": export_commit,
-              },
-          }).encode("utf-8")
+          RACE_ARGS=()
+          IFS=',' read -ra RACES <<< "$M15_RACES"
+          for race in "${RACES[@]}"; do
+            if [ -n "$race" ]; then
+              RACE_ARGS+=(--race "$race")
+            fi
+          done
 
-          req = urllib.request.Request(
-              "https://api.github.com/repos/kantsu888-droid/oba-odds/dispatches",
-              data=body,
-              method="POST",
-              headers={
-                  "Authorization": f"Bearer {token}",
-                  "Accept": "application/vnd.github+json",
-                  "X-GitHub-Api-Version": "2022-11-28",
-                  "User-Agent": "oba-odds-export-m15-dispatch",
-                  "Content-Type": "application/json",
-              },
-          )
-          with urllib.request.urlopen(req, timeout=30) as response:
-              if response.status != 204:
-                  raise SystemExit(
-                      f"repository_dispatch failed: HTTP {response.status}"
-                  )
-          print(
-              "Dispatched soi_m15_ready for "
-              f"{target_date} @ {export_commit}"
-          )
-          PY
+          python source/soi_prospective_m15_ingest.py             --repo-root source             --export-data-dir "data/${TODAY}"             --export-commit "$EXPORT_COMMIT"             --target-date "$TODAY"             --output-root /tmp/soi-prospective             --summary-output /tmp/soi-prospective-summary.json             "${RACE_ARGS[@]}"
+
+          mkdir -p "data/soi_commitments/${TODAY}"
+          COMMITMENT_PATH="data/soi_commitments/${TODAY}/${EXPORT_COMMIT}.json"
+
+          python source/soi_prospective_public_commitment.py             --receipt-root /tmp/soi-prospective             --target-date "$TODAY"             --public-odds-commit "$EXPORT_COMMIT"             --private-source-commit "$PRIVATE_SOURCE_COMMIT"             --output "$COMMITMENT_PATH"
+
+          {
+            echo "# SOI m15 prospective dry-run / commitment"
+            echo
+            echo "- target_date: $TODAY"
+            echo "- public_odds_commit: $EXPORT_COMMIT"
+            echo "- private_source_commit: $PRIVATE_SOURCE_COMMIT"
+            echo "- m15_races: $M15_RACES"
+            echo
+            echo '~~~json'
+            cat /tmp/soi-prospective-summary.json
+            echo
+            echo '~~~'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit public SOI commitment
+        if: steps.capture.outputs.m15_captured == 'true' && steps.commit.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add data/soi_commitments/ 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No SOI public commitment to persist"
+            exit 0
+          fi
+
+          git commit -m "Commit SOI prospective m15 hashes"
+
+          for attempt in 1 2 3; do
+            echo "Commitment push attempt ${attempt}/3"
+            if git pull --rebase origin main && git push origin main; then
+              echo "SOI public commitment pushed successfully"
+              exit 0
+            fi
+
+            git rebase --abort || true
+            sleep 5
+          done
+
+          echo "Failed to push SOI public commitment after 3 attempts"
+          exit 1

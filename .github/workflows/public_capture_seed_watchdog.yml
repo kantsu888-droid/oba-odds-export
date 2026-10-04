@@ -2,15 +2,15 @@ name: Public Odds Capture Seed Watchdog
 
 on:
   workflow_dispatch:
-  # Independent lightweight entry trigger. The main capture workflow keeps
-  # its own 5-minute schedule; this watchdog is staggered by two minutes and
+  # Independent lightweight entry trigger. Use the same proven */5 cron form
+  # that previously produced schedule events in this repository. The watchdog
   # only dispatches when no capture run is active.
   schedule:
-    - cron: "49 9 * * *"
+    - cron: "50 9 * * *"
       timezone: "Asia/Tokyo"
-    - cron: "4/10 10-20 * * *"
+    - cron: "*/5 10-20 * * *"
       timezone: "Asia/Tokyo"
-    - cron: "4 21 * * *"
+    - cron: "0 21 * * *"
       timezone: "Asia/Tokyo"
 
 permissions:

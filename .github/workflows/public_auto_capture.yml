@@ -325,11 +325,12 @@ jobs:
           DELAY="$(
             python ops/next_capture_dispatch.py \
               --data-dir "data/$TODAY" \
+              --keepalive-when-idle \
               --delay-only
           )"
 
           if [ "$DELAY" = "none" ]; then
-            echo "No future uncaptured targets; capture chain stops."
+            echo "No relay delay returned; capture chain stops."
             exit 0
           fi
 

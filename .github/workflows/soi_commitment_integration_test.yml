@@ -1,0 +1,65 @@
+name: SOI Commitment Integration Test
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/public_auto_capture.yml"
+      - ".github/workflows/soi_commitment_integration_test.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Checkout public repository
+        uses: actions/checkout@v4
+
+      - name: Checkout private SOI source
+        uses: actions/checkout@v4
+        with:
+          repository: kantsu888-droid/oba-odds
+          token: ${{ secrets.SOURCE_PAT }}
+          path: source
+          persist-credentials: false
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run retained m15 dry-run integration
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXPORT_COMMIT="$(git rev-parse HEAD)"
+          rm -rf /tmp/soi-prospective
+          rm -f /tmp/soi-public-commitment.json
+
+          python source/soi_prospective_m15_ingest.py             --repo-root source             --export-data-dir data/2026-10-03             --export-commit "$EXPORT_COMMIT"             --target-date 2026-10-03             --output-root /tmp/soi-prospective             --summary-output /tmp/soi-summary.json             --race kochi:7
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          d = json.loads(
+              Path("/tmp/soi-summary.json").read_text(encoding="utf-8")
+          )
+          assert d["activated"] is False, d
+          assert d["status"] == "dry_run_not_activated", d
+          assert d["race_count"] == 1, d
+          assert d["created_paths"] == [], d
+          assert d["races"][0]["track"] == "kochi", d
+          assert d["races"][0]["race_no"] == 7, d
+          assert not Path("/tmp/soi-prospective").exists(), d
+          print("private-source m15 dry-run safety verified")
+          PY
+
+          PRIVATE_SOURCE_COMMIT="$(git -C source rev-parse HEAD)"
+          python source/soi_prospective_public_commitment.py             --receipt-root /tmp/soi-prospective             --target-date 2026-10-03             --public-odds-commit "$EXPORT_COMMIT"             --private-source-commit "$PRIVATE_SOURCE_COMMIT"             --output /tmp/soi-public-commitment.json
+
+          test ! -e /tmp/soi-public-commitment.json
+          echo "no public commitment emitted before activation"

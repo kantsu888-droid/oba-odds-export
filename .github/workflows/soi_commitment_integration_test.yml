@@ -5,6 +5,8 @@ on:
     paths:
       - ".github/workflows/public_auto_capture.yml"
       - ".github/workflows/soi_commitment_integration_test.yml"
+      - "ops/next_capture_dispatch.py"
+      - "ops/next_capture_dispatch_test.py"
   workflow_dispatch:
 
 permissions:
@@ -30,6 +32,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Test capture-chain dispatch calculator
+        run: python -m unittest ops.next_capture_dispatch_test -v
 
       - name: Run retained m15 dry-run integration
         shell: bash

@@ -263,7 +263,7 @@ jobs:
           mkdir -p "data/soi_commitments/${TODAY}"
           COMMITMENT_PATH="data/soi_commitments/${TODAY}/${EXPORT_COMMIT}.json"
 
-          python source/soi_prospective_public_commitment.py             --receipt-root /tmp/soi-prospective             --target-date "$TODAY"             --public-odds-commit "$EXPORT_COMMIT"             --private-source-commit "$PRIVATE_SOURCE_COMMIT"             --output "$COMMITMENT_PATH"
+          python source/soi_prospective_public_commitment.py             --receipt-root /tmp/soi-prospective             --target-date "$TODAY"             --public-odds-commit "$EXPORT_COMMIT"             --private-source-commit "$PRIVATE_SOURCE_COMMIT"             --public-workflow-commit "$GITHUB_WORKFLOW_SHA"             --output "$COMMITMENT_PATH"
 
           {
             echo "# SOI m15 prospective dry-run / commitment"

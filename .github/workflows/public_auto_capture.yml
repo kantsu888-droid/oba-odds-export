@@ -317,62 +317,9 @@ jobs:
           TODAY="$(TZ=Asia/Tokyo date +%F)"
 
           DELAY="$(
-            python - "$TODAY" <<'PY'
-          import csv
-          import glob
-          import sys
-          from datetime import datetime, timedelta, timezone
-          from pathlib import Path
-
-          JST = timezone(timedelta(hours=9))
-          TARGET_MINUTES = (30, 15, 10, 5, 2)
-          RELAY_MAX_SECONDS = 5400
-          DISPATCH_LEAD_SECONDS = 480
-          MAX_LATE_SECONDS = 120
-
-          target_date = sys.argv[1]
-          folder = Path("data") / target_date
-          schedules = sorted(folder.glob("all_schedule_*.csv"))
-          if not schedules:
-              print("none")
-              raise SystemExit(0)
-
-          schedule = schedules[-1]
-          now = datetime.now(JST)
-          targets = []
-
-          with schedule.open("r", newline="", encoding="utf-8-sig") as f:
-              for row in csv.DictReader(f):
-                  start = datetime.strptime(
-                      f"{row['race_date']} {row['start_time']}",
-                      "%Y-%m-%d %H:%M",
-                  ).replace(tzinfo=JST)
-                  track = row["track"].strip()
-                  race_no = int(row["race_no"])
-                  for minutes_before in TARGET_MINUTES:
-                      pattern = (
-                          folder
-                          / f"{track}_{race_no}R_m{minutes_before}_*_odds.csv"
-                      )
-                      if glob.glob(str(pattern)):
-                          continue
-                      target = start - timedelta(minutes=minutes_before)
-                      if target < now - timedelta(seconds=MAX_LATE_SECONDS):
-                          continue
-                      targets.append(target)
-
-          if not targets:
-              print("none")
-              raise SystemExit(0)
-
-          next_target = min(targets)
-          dispatch_at = next_target - timedelta(
-              seconds=DISPATCH_LEAD_SECONDS
-          )
-          delay = max(0, int((dispatch_at - now).total_seconds()))
-          delay = min(delay, RELAY_MAX_SECONDS)
-          print(delay)
-          PY
+            python ops/next_capture_dispatch.py \
+              --data-dir "data/$TODAY" \
+              --delay-only
           )"
 
           if [ "$DELAY" = "none" ]; then

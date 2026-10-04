@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - ".github/workflows/public_auto_capture.yml"
+      - ".github/workflows/public_capture_seed_watchdog.yml"
       - ".github/workflows/soi_commitment_integration_test.yml"
       - "ops/next_capture_dispatch.py"
       - "ops/next_capture_dispatch_test.py"

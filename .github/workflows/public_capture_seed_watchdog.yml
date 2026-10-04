@@ -1,0 +1,52 @@
+name: Public Odds Capture Seed Watchdog
+
+on:
+  workflow_dispatch:
+  # Independent lightweight entry trigger. The main capture workflow keeps
+  # its own 5-minute schedule; this watchdog is staggered by two minutes and
+  # only dispatches when no capture run is active.
+  schedule:
+    - cron: "49 9 * * *"
+      timezone: "Asia/Tokyo"
+    - cron: "4/10 10-20 * * *"
+      timezone: "Asia/Tokyo"
+    - cron: "4 21 * * *"
+      timezone: "Asia/Tokyo"
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: public-odds-capture-seed-watchdog
+  cancel-in-progress: false
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Dispatch capture only when chain is inactive
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          ACTIVE="$(gh api             -H "Accept: application/vnd.github+json"             "/repos/$REPO/actions/workflows/public_auto_capture.yml/runs?per_page=30"             --jq '[.workflow_runs[] | select(
+              .status == "queued"
+              or .status == "in_progress"
+              or .status == "pending"
+              or .status == "waiting"
+              or .status == "requested"
+            )] | length')"
+
+          if [ "$ACTIVE" -gt 0 ]; then
+            echo "Public capture chain already active ($ACTIVE run(s)); no seed dispatch."
+            exit 0
+          fi
+
+          gh api             --method POST             -H "Accept: application/vnd.github+json"             "/repos/$REPO/actions/workflows/public_auto_capture.yml/dispatches"             -f ref=main
+
+          echo "Public capture chain was inactive; workflow_dispatch seed sent."

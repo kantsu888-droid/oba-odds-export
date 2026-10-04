@@ -74,12 +74,11 @@ jobs:
           TODAY="$(TZ=Asia/Tokyo date +%F)"
           mkdir -p "data/${TODAY}"
 
-          if compgen -G "data/${TODAY}/all_schedule_*.csv" > /dev/null; then
-            echo "Today's schedule already exists."
-          else
-            echo "Scanning all six target tracks for ${TODAY}."
-            python fetch_schedule_all.py
-          fi
+          echo "Refreshing all six target-track schedules for ${TODAY}."
+          # Race times can change after the first daily schedule fetch. Keep
+          # the latest immutable schedule snapshot instead of trusting only
+          # the morning copy; market admission hashes the exact schedule used.
+          python fetch_schedule_all.py
 
       - name: Capture odds without private-repository pushes
         id: capture
@@ -220,7 +219,9 @@ jobs:
           mkdir -p "data/soi_commitments/${TODAY}"
           COMMITMENT_PATH="data/soi_commitments/${TODAY}/${EXPORT_COMMIT}.json"
 
-          python source/soi_prospective_public_commitment.py             --receipt-root /tmp/soi-prospective             --target-date "$TODAY"             --public-odds-commit "$EXPORT_COMMIT"             --private-source-commit "$PRIVATE_SOURCE_COMMIT"             --output "$COMMITMENT_PATH"
+          PUBLIC_WORKFLOW_COMMIT="$(git rev-parse HEAD)"
+
+          python source/soi_prospective_public_commitment.py             --receipt-root /tmp/soi-prospective             --target-date "$TODAY"             --public-odds-commit "$EXPORT_COMMIT"             --private-source-commit "$PRIVATE_SOURCE_COMMIT"             --public-workflow-commit "$PUBLIC_WORKFLOW_COMMIT"             --output "$COMMITMENT_PATH"
 
           {
             echo "# SOI m15 prospective dry-run / commitment"

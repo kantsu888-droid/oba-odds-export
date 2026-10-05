@@ -6,13 +6,6 @@ on:
     paths:
       - ".github/workflows/private_vps_dispatch_bridge.yml"
   workflow_dispatch:
-  schedule:
-    - cron: "45 5 * * *"
-      timezone: "Asia/Tokyo"
-    - cron: "10 6 * * *"
-      timezone: "Asia/Tokyo"
-    - cron: "7 8 * * *"
-      timezone: "Asia/Tokyo"
 
 permissions:
   contents: read

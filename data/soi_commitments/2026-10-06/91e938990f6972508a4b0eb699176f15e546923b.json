@@ -1,0 +1,73 @@
+{
+  "schema_version": "soi-prospective-public-commitment-v1",
+  "target_date": "2026-10-06",
+  "public_odds_commit": "91e938990f6972508a4b0eb699176f15e546923b",
+  "private_source_commit": "d055629c472e8e073e3a88e00316facc69fc09e3",
+  "public_workflow_commit": "975e26fa13f517659aef3d6e33557408280c0180",
+  "receipt_count": 4,
+  "receipts": [
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-06/大井_2R_A1_m15.json",
+      "sha256": "45fd53e2a32ec0113ddcd45fa736cbeb86fc7c069aa8a7d0de7a5ba5bf91c033",
+      "byte_count": 80018,
+      "target_date": "2026-10-06",
+      "venue": "大井",
+      "race_no": 2,
+      "minutes_before": 15,
+      "model": "A1",
+      "model_role": "primary",
+      "fixed_at": "2026-10-06T05:47:06.942288+00:00",
+      "scheduled_off": "2026-10-06T15:02:00+09:00",
+      "source_export_commit": "91e938990f6972508a4b0eb699176f15e546923b"
+    },
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-06/大井_2R_B1_m15.json",
+      "sha256": "e1b8b9c6f498065ba35629fe522b7ba6a3cc6b71531d83b3df92b16734d36adc",
+      "byte_count": 79914,
+      "target_date": "2026-10-06",
+      "venue": "大井",
+      "race_no": 2,
+      "minutes_before": 15,
+      "model": "B1",
+      "model_role": "primary",
+      "fixed_at": "2026-10-06T05:47:06.942288+00:00",
+      "scheduled_off": "2026-10-06T15:02:00+09:00",
+      "source_export_commit": "91e938990f6972508a4b0eb699176f15e546923b"
+    },
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-06/大井_2R_C1_m15.json",
+      "sha256": "c145a954b600a5ce3f7c3f942f7fa86acf4813e050720f3700b83410862d3b81",
+      "byte_count": 79829,
+      "target_date": "2026-10-06",
+      "venue": "大井",
+      "race_no": 2,
+      "minutes_before": 15,
+      "model": "C1",
+      "model_role": "shadow",
+      "fixed_at": "2026-10-06T05:47:06.942288+00:00",
+      "scheduled_off": "2026-10-06T15:02:00+09:00",
+      "source_export_commit": "91e938990f6972508a4b0eb699176f15e546923b"
+    },
+    {
+      "kind": "market_admission",
+      "schema_version": "soi-prospective-market-admission-v1",
+      "receipt_path": "market_admission/2026-10-06/大井_2R_m15.json",
+      "sha256": "cb406e04125b8a44b5b9c01850a5f49280e95ed5d23e46271952deaa0da219d9",
+      "byte_count": 2537,
+      "target_date": "2026-10-06",
+      "track": "oi",
+      "race_no": 2,
+      "minutes_before": 15,
+      "market_status": "admitted",
+      "market_evidence_admissible": true,
+      "source_export_commit": "91e938990f6972508a4b0eb699176f15e546923b"
+    }
+  ],
+  "privacy_note": "Public file contains receipt hashes and minimal metadata only. Private SOI decision bodies are committed by hash but are not disclosed here."
+}

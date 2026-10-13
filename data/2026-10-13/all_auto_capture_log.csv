@@ -1,0 +1,2 @@
+﻿track,track_code,race_no,minutes_before,target_time,started_at,finished_at,status,returncode
+kawasaki,21,1,30,2026-10-13T14:30:00+09:00,2026-10-13T14:30:00.000507+09:00,2026-10-13T14:30:04.190276+09:00,success,0

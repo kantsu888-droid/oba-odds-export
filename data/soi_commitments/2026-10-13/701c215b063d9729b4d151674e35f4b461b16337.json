@@ -1,0 +1,73 @@
+{
+  "schema_version": "soi-prospective-public-commitment-v1",
+  "target_date": "2026-10-13",
+  "public_odds_commit": "701c215b063d9729b4d151674e35f4b461b16337",
+  "private_source_commit": "4531c476e0750266342a6750079034e82a22deeb",
+  "public_workflow_commit": "975e26fa13f517659aef3d6e33557408280c0180",
+  "receipt_count": 4,
+  "receipts": [
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-13/川崎_8R_A1_m15.json",
+      "sha256": "2b910e9cf4af0aa52c935390ca07f36a8b8f83f5ea7c6343c63b14f6aee4bcc5",
+      "byte_count": 80127,
+      "target_date": "2026-10-13",
+      "venue": "川崎",
+      "race_no": 8,
+      "minutes_before": 15,
+      "model": "A1",
+      "model_role": "primary",
+      "fixed_at": "2026-10-13T09:15:06.340118+00:00",
+      "scheduled_off": "2026-10-13T18:30:00+09:00",
+      "source_export_commit": "701c215b063d9729b4d151674e35f4b461b16337"
+    },
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-13/川崎_8R_B1_m15.json",
+      "sha256": "96ac3080065549a5bb7cd04ae2a1bfbdbd77d0fcf934971035c890f099a208bb",
+      "byte_count": 80035,
+      "target_date": "2026-10-13",
+      "venue": "川崎",
+      "race_no": 8,
+      "minutes_before": 15,
+      "model": "B1",
+      "model_role": "primary",
+      "fixed_at": "2026-10-13T09:15:06.340118+00:00",
+      "scheduled_off": "2026-10-13T18:30:00+09:00",
+      "source_export_commit": "701c215b063d9729b4d151674e35f4b461b16337"
+    },
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-13/川崎_8R_C1_m15.json",
+      "sha256": "d23a9e8aa797c29a7592d8bc81212e63e392ec12e9c6ef41dc0792a18af4427c",
+      "byte_count": 79891,
+      "target_date": "2026-10-13",
+      "venue": "川崎",
+      "race_no": 8,
+      "minutes_before": 15,
+      "model": "C1",
+      "model_role": "shadow",
+      "fixed_at": "2026-10-13T09:15:06.340118+00:00",
+      "scheduled_off": "2026-10-13T18:30:00+09:00",
+      "source_export_commit": "701c215b063d9729b4d151674e35f4b461b16337"
+    },
+    {
+      "kind": "market_admission",
+      "schema_version": "soi-prospective-market-admission-v1",
+      "receipt_path": "market_admission/2026-10-13/川崎_8R_m15.json",
+      "sha256": "9d7b095b1d67cdd2b57f4e2a171bc560d7abb14df9c0b78be381a201c6a52f29",
+      "byte_count": 2556,
+      "target_date": "2026-10-13",
+      "track": "kawasaki",
+      "race_no": 8,
+      "minutes_before": 15,
+      "market_status": "admitted",
+      "market_evidence_admissible": true,
+      "source_export_commit": "701c215b063d9729b4d151674e35f4b461b16337"
+    }
+  ],
+  "privacy_note": "Public file contains receipt hashes and minimal metadata only. Private SOI decision bodies are committed by hash but are not disclosed here."
+}

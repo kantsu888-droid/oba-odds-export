@@ -1,0 +1,73 @@
+{
+  "schema_version": "soi-prospective-public-commitment-v1",
+  "target_date": "2026-10-21",
+  "public_odds_commit": "34e1046ec8bfa09ffa2003036b0c4c9dfebf8670",
+  "private_source_commit": "26cc37247f1c67f5a84c2f40954a5eacc88f8430",
+  "public_workflow_commit": "975e26fa13f517659aef3d6e33557408280c0180",
+  "receipt_count": 4,
+  "receipts": [
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-21/浦和_5R_A1_m15.json",
+      "sha256": "9dcce814cb6006a9f48f9423e9e19799c9d2f5692ac0025b665b0942b5351f64",
+      "byte_count": 79937,
+      "target_date": "2026-10-21",
+      "venue": "浦和",
+      "race_no": 5,
+      "minutes_before": 15,
+      "model": "A1",
+      "model_role": "primary",
+      "fixed_at": "2026-10-21T05:05:06.647230+00:00",
+      "scheduled_off": "2026-10-21T14:20:00+09:00",
+      "source_export_commit": "34e1046ec8bfa09ffa2003036b0c4c9dfebf8670"
+    },
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-21/浦和_5R_B1_m15.json",
+      "sha256": "9308ae652acad36cf47464ad8113b371e0f6c46f9cac38f6cd7e742a0199f3d6",
+      "byte_count": 80117,
+      "target_date": "2026-10-21",
+      "venue": "浦和",
+      "race_no": 5,
+      "minutes_before": 15,
+      "model": "B1",
+      "model_role": "primary",
+      "fixed_at": "2026-10-21T05:05:06.647230+00:00",
+      "scheduled_off": "2026-10-21T14:20:00+09:00",
+      "source_export_commit": "34e1046ec8bfa09ffa2003036b0c4c9dfebf8670"
+    },
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-21/浦和_5R_C1_m15.json",
+      "sha256": "756a512095eb261cd7022a48853d8790462e2402b0974051481a514d1b5cbcb0",
+      "byte_count": 79851,
+      "target_date": "2026-10-21",
+      "venue": "浦和",
+      "race_no": 5,
+      "minutes_before": 15,
+      "model": "C1",
+      "model_role": "shadow",
+      "fixed_at": "2026-10-21T05:05:06.647230+00:00",
+      "scheduled_off": "2026-10-21T14:20:00+09:00",
+      "source_export_commit": "34e1046ec8bfa09ffa2003036b0c4c9dfebf8670"
+    },
+    {
+      "kind": "market_admission",
+      "schema_version": "soi-prospective-market-admission-v1",
+      "receipt_path": "market_admission/2026-10-21/浦和_5R_m15.json",
+      "sha256": "c59c1be6472b47b991b3a196fb289c15a01fd3083dad25fb9444b9a414da8093",
+      "byte_count": 2547,
+      "target_date": "2026-10-21",
+      "track": "urawa",
+      "race_no": 5,
+      "minutes_before": 15,
+      "market_status": "admitted",
+      "market_evidence_admissible": true,
+      "source_export_commit": "34e1046ec8bfa09ffa2003036b0c4c9dfebf8670"
+    }
+  ],
+  "privacy_note": "Public file contains receipt hashes and minimal metadata only. Private SOI decision bodies are committed by hash but are not disclosed here."
+}

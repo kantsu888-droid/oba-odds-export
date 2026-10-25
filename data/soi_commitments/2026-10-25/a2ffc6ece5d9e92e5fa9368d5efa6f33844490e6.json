@@ -1,0 +1,73 @@
+{
+  "schema_version": "soi-prospective-public-commitment-v1",
+  "target_date": "2026-10-25",
+  "public_odds_commit": "a2ffc6ece5d9e92e5fa9368d5efa6f33844490e6",
+  "private_source_commit": "f1562d2ea12d7c8644cb6ccbd92413a069897e17",
+  "public_workflow_commit": "975e26fa13f517659aef3d6e33557408280c0180",
+  "receipt_count": 4,
+  "receipts": [
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-25/高知_10R_A1_m15.json",
+      "sha256": "73717093a22dde8ebe19144641338ca3d13bf9ab5728cdab47809064e3a1c5e8",
+      "byte_count": 79994,
+      "target_date": "2026-10-25",
+      "venue": "高知",
+      "race_no": 10,
+      "minutes_before": 15,
+      "model": "A1",
+      "model_role": "primary",
+      "fixed_at": "2026-10-25T11:10:06.277125+00:00",
+      "scheduled_off": "2026-10-25T20:20:00+09:00",
+      "source_export_commit": "a2ffc6ece5d9e92e5fa9368d5efa6f33844490e6"
+    },
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-25/高知_10R_B1_m15.json",
+      "sha256": "3794e943590a93ded2214a734cbf6cfa93f890af0031af92b34083a8470491be",
+      "byte_count": 79875,
+      "target_date": "2026-10-25",
+      "venue": "高知",
+      "race_no": 10,
+      "minutes_before": 15,
+      "model": "B1",
+      "model_role": "primary",
+      "fixed_at": "2026-10-25T11:10:06.277125+00:00",
+      "scheduled_off": "2026-10-25T20:20:00+09:00",
+      "source_export_commit": "a2ffc6ece5d9e92e5fa9368d5efa6f33844490e6"
+    },
+    {
+      "kind": "decision",
+      "schema_version": "soi-prospective-decision-receipt-v1",
+      "receipt_path": "decisions/2026-10-25/高知_10R_C1_m15.json",
+      "sha256": "068f09cd284748e98d3aa7c941c81b556c7c39c325f0fd9b43c5381b4b495071",
+      "byte_count": 79750,
+      "target_date": "2026-10-25",
+      "venue": "高知",
+      "race_no": 10,
+      "minutes_before": 15,
+      "model": "C1",
+      "model_role": "shadow",
+      "fixed_at": "2026-10-25T11:10:06.277125+00:00",
+      "scheduled_off": "2026-10-25T20:20:00+09:00",
+      "source_export_commit": "a2ffc6ece5d9e92e5fa9368d5efa6f33844490e6"
+    },
+    {
+      "kind": "market_admission",
+      "schema_version": "soi-prospective-market-admission-v1",
+      "receipt_path": "market_admission/2026-10-25/高知_10R_m15.json",
+      "sha256": "34e12c54dd35395b89fe21a7bbda0279fa8d7da07cc8ca8d357aa3244053b8e6",
+      "byte_count": 2550,
+      "target_date": "2026-10-25",
+      "track": "kochi",
+      "race_no": 10,
+      "minutes_before": 15,
+      "market_status": "admitted",
+      "market_evidence_admissible": true,
+      "source_export_commit": "a2ffc6ece5d9e92e5fa9368d5efa6f33844490e6"
+    }
+  ],
+  "privacy_note": "Public file contains receipt hashes and minimal metadata only. Private SOI decision bodies are committed by hash but are not disclosed here."
+}

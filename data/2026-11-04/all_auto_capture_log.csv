@@ -1,2 +1,3 @@
 ﻿track,track_code,race_no,minutes_before,target_time,started_at,finished_at,status,returncode
 funabashi,19,1,30,2026-11-04T14:10:00+09:00,2026-11-04T14:10:00.000627+09:00,2026-11-04T14:10:15.491203+09:00,success,0
+funabashi,19,1,15,2026-11-04T14:25:00+09:00,2026-11-04T14:25:00.000583+09:00,2026-11-04T14:25:08.005153+09:00,success,0

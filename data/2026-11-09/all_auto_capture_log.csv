@@ -1,0 +1,2 @@
+﻿track,track_code,race_no,minutes_before,target_time,started_at,finished_at,status,returncode
+saga,32,1,30,2026-11-09T14:05:00+09:00,2026-11-09T14:05:00.000554+09:00,2026-11-09T14:05:03.097443+09:00,success,0

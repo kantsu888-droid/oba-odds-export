@@ -1,0 +1,2 @@
+﻿track,track_code,race_no,minutes_before,target_time,started_at,finished_at,status,returncode
+oi,20,1,30,2026-11-17T14:00:00+09:00,2026-11-17T14:00:00.000451+09:00,2026-11-17T14:00:05.472060+09:00,success,0

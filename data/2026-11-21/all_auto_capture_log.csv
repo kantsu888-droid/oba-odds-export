@@ -1,2 +1,3 @@
 ﻿track,track_code,race_no,minutes_before,target_time,started_at,finished_at,status,returncode
 kochi,31,1,30,2026-11-21T14:25:00+09:00,2026-11-21T14:25:00.000660+09:00,2026-11-21T14:25:02.979057+09:00,success,0
+kochi,31,1,15,2026-11-21T14:40:00+09:00,2026-11-21T14:40:00.000450+09:00,2026-11-21T14:40:03.861754+09:00,success,0

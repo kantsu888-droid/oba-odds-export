@@ -1,2 +1,3 @@
 ﻿track,track_code,race_no,minutes_before,target_time,started_at,finished_at,status,returncode
 urawa,18,1,30,2026-11-26T11:50:00+09:00,2026-11-26T11:50:00.000589+09:00,2026-11-26T11:50:04.931890+09:00,success,0
+urawa,18,1,15,2026-11-26T12:05:00+09:00,2026-11-26T12:05:00.000770+09:00,2026-11-26T12:05:03.885964+09:00,success,0
